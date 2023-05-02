@@ -1,0 +1,74 @@
+;Prüfung von _sx_hasError in M999 um Maschinenstart zu verhindern.
+
+
+#Loop
+	;; Error Fehler Endstufe X Y Z
+	if(
+		EQ(_sx_hasError,0) 
+		&& EQ(_hw_sim,0) 
+		&& NE(_hw_input_num|8,1), 
+			exec(
+				_sx_hasError = 1, 
+				cmd('Machine.Emergency_Stop'), 
+				print('Fehler Endstufe X Y Z'),
+				msg('Fehler Endstufe X Y Z')
+			)
+	);
+	
+	;; Error Fehler Endstufe A
+	if(
+		EQ(_sx_hasError,0) 
+		&& EQ(_hw_sim,0) 
+		&& EQ(_extin1_num|4,0),
+			exec(
+				_sx_hasError = 1, 
+				cmd('Machine.Emergency_Stop'), 
+				print('Fehler Endstufe A'),
+				msg('Fehler Endstufe A')
+			)
+	);
+	
+	;; Error Fehler Frequenzumrichter
+	if(
+		EQ(_sx_hasError,0) 
+		&& EQ(_hw_sim,0) 
+		&& NE(_extin1_num|5,1), 
+			exec(_sx_hasError = 1, 
+			cmd('Machine.Emergency_Stop'), 
+			print('Fehler Frequenzumrichter'),
+			msg('Fehler Frequenzumrichter')
+		)
+	);
+	
+	;; Error Spindel Thermoschutz
+	if(
+		EQ(_sx_hasError,0) 
+		&& EQ(_hw_sim,0) 
+		&& NE(_hw_input_num|6,1), 
+			exec(
+				_sx_hasError = 1, 
+				cmd('Machine.Emergency_Stop'), 
+				print('Spindel Thermoschutz'),
+				msg('Spindel Thermoschutz')
+			)
+	);
+	
+	;; Error Druckluft zu niedrig
+	if(
+		EQ(_sx_hasError,0) 
+		&& EQ(_hw_sim,0) 
+		&& NE(_extin1_num|6,1), 
+			exec(
+				_sx_hasError = 1, 
+				cmd('Machine.Emergency_Stop'), 
+				print('Druckluft zu niedrig'),
+				msg('Druckluft zu niedrig')
+			)
+	);
+
+	;END
+
+#OnInit
+	_sx_hasError = 0;
+
+	;END

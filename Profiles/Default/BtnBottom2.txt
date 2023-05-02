@@ -1,0 +1,15 @@
+***
+expr: "_sx_multiCS_enabled = XOR(_sx_multiCS_enabled,1)" "C1" updown="NE(AND(_sx_multiCS_enabled,1),0)" updatefast="true" imagechange="true" stroke=1.1 tooltip="Bei Programmende automatisch mit CS fortsetzen" color=#ff0000
+expr: "_sx_multiCS_enabled = XOR(_sx_multiCS_enabled,2)" "C2" updown="NE(AND(_sx_multiCS_enabled,2),0)" updatefast="true" imagechange="true" stroke=1.1 tooltip="Bei Programmende automatisch mit CS fortsetzen" color=#ff0000
+expr: "_sx_multiCS_enabled = XOR(_sx_multiCS_enabled,4)" "C3" updown="NE(AND(_sx_multiCS_enabled,4),0)" updatefast="true" imagechange="true" stroke=1.1 tooltip="Bei Programmende automatisch mit CS fortsetzen" color=#ff0000
+expr: "_sx_multiCS_enabled = XOR(_sx_multiCS_enabled,8)" "C4" updown="NE(AND(_sx_multiCS_enabled,8),0)" updatefast="true" imagechange="true" stroke=1.1 tooltip="Bei Programmende automatisch mit CS fortsetzen" color=#ff0000
+expr: "_sx_multiCS_enabled = XOR(_sx_multiCS_enabled,16)" "C5" updown="NE(AND(_sx_multiCS_enabled,16),0)" updatefast="true" imagechange="true" stroke=1.1 tooltip="Bei Programmende automatisch mit CS fortsetzen" color=#ff0000
+expr: "_sx_multiCS_enabled = XOR(_sx_multiCS_enabled,32)" "C6" updown="NE(AND(_sx_multiCS_enabled,32),0)" updatefast="true" imagechange="true" stroke=1.1 tooltip="Bei Programmende automatisch mit CS fortsetzen" color=#ff0000
+expr: "_sx_multiCS_enabled = XOR(_sx_multiCS_enabled,64)" "C7" updown="NE(AND(_sx_multiCS_enabled,64),0)" updatefast="true" imagechange="true" stroke=1.1 tooltip="Bei Programmende automatisch mit CS fortsetzen" color=#ff0000
+expr: "_sx_multiCS_enabled = XOR(_sx_multiCS_enabled,128)" "C8" updown="NE(AND(_sx_multiCS_enabled,128),0)" updatefast="true" imagechange="true" stroke=1.1 tooltip="Bei Programmende automatisch mit CS fortsetzen" color=#ff0000
+expr: "_sx_multiCS_enabled = XOR(_sx_multiCS_enabled,256)" "C9" updown="NE(AND(_sx_multiCS_enabled,256),0)" updatefast="true" imagechange="true" stroke=1.1 tooltip="Bei Programmende automatisch mit CS fortsetzen" color=#ff0000
+***
+expr: "startcode('G65 P297 Q0')" "Messung" stroke=1.1 tooltip="Messauswahl anzeigen" color=#ffff00 size=100
+expr: "startcode('M203')" "Temperatur Einstellung" stroke=1.1 tooltip="Temperaturüberwachung einstellen" color=#ffff00 size=140
+***
+expr: "_sx_sim_input_wkz_spannzange = EQ(_sx_sim_input_wkz_spannzange,0)" "E2" enable="AND(_hw_sim,_sx_tool_autoremove)" updown="_sx_sim_input_wkz_spannzange" updatefast="true" color=#ff0000 size=60

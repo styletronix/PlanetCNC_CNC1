@@ -1,0 +1,109 @@
+;Parameters.txt
+	;_sx_tool_removed_num 0.0
+	;_sx_tool_measurerequired 0.0
+	;_sx_tool_removed 0.0
+	;_sx_tool_autoremove 0.0
+	
+#OnInit
+	_sx_tool_remove_delay_count = 0.0;
+	_sx_tool_remove_delay = 2.0;
+	
+#Loop
+	if( EQ(_sx_tool_autoremove,1)
+		&& EQ(_hw_sim,0)
+		&& GT(_sx_tool_loaded_pin,0) 
+		&& EQ(_hw_stop,1)
+		&& LT(_sx_tool_remove_delay_count,_sx_tool_remove_delay)
+		&& EQ(_hw_input_num|_sx_tool_loaded_pin,0),
+				_sx_tool_remove_delay_count = _sx_tool_remove_delay_count + 1
+	);
+	
+	if( EQ(_sx_tool_autoremove,1)
+		&& EQ(_hw_sim,1)
+		&& EQ(_hw_stop,1)
+		&& LT(_sx_tool_remove_delay_count,_sx_tool_remove_delay)
+		&& EQ(_sx_sim_input_wkz_spannzange,0),
+				_sx_tool_remove_delay_count = _sx_tool_remove_delay_count + 1
+	);
+
+	if( EQ(_sx_tool_autoremove,1)
+		&& GT(_sx_tool_remove_delay_count,0)
+		&& EQ(_hw_sim,0)
+		&& EQ(_hw_input_num|_sx_tool_loaded_pin,1),
+				_sx_tool_remove_delay_count = 0.0
+	);
+	
+	if( EQ(_sx_tool_autoremove,1)
+		&& GT(_sx_tool_remove_delay_count,0)
+		&& EQ(_hw_sim,1)
+		&& EQ(_sx_sim_input_wkz_spannzange,1),
+				_sx_tool_remove_delay_count = 0.0
+	);
+	
+	if( EQ(_sx_tool_autoremove,1)
+		&& GT(_sx_tool_loaded_pin,0) 
+		&& GE(_sx_tool_remove_delay_count,_sx_tool_remove_delay)
+		&& EQ(_hw_stop,1)
+		&& EQ(_sx_tool_removed,0),
+			exec(
+				_sx_tool_removed = 1,
+				print('Werkzeug entfernt'),
+				_sx_tool_measureRequired = 1,				
+				_sx_tool_removed_num = _current_tool,
+				_current_tool = 0
+			)
+	);
+
+
+	if( EQ(_sx_tool_autoremove,1)
+		&& GT(_sx_tool_loaded_pin,0)  
+		&& EQ(_hw_sim,1)
+		&& EQ(_hw_stop,1)
+		&& EQ(_sx_tool_removed,1)
+		&& EQ(_hw_input_num|_sx_tool_loaded_pin,1),
+			exec(
+				_sx_tool_removed = 0,
+				_sx_tool_remove_delay_count = 0.0,
+				print('Werkzeug eingesetzt')
+			)
+	);
+	
+	if( EQ(_sx_tool_autoremove,1)
+		&& EQ(_hw_sim,1)
+		&& EQ(_hw_stop,1)
+		&& EQ(_sx_tool_removed,1)
+		&& EQ(_sx_sim_input_wkz_spannzange,1),
+			exec(
+				_sx_tool_removed = 0,
+				_sx_tool_remove_delay_count = 0.0,
+				print('Werkzeug eingesetzt')
+			)
+	);
+	
+	if( EQ(_sx_tool_autoremove,1)
+		&& EQ(_hw_sim,0),
+			_sx_toolButtonsInvert = GT(_sx_tool_loaded_pin,0) && EQ(_current_tool,0) && EQ(_hw_input_num|_sx_tool_loaded_pin,1)
+	);
+	
+	if( EQ(_sx_tool_autoremove,1)
+		&& EQ(_hw_sim,1),
+			_sx_toolButtonsInvert = EQ(_current_tool,0) && EQ(_sx_sim_input_wkz_spannzange,1)
+	);
+	
+	if( EQ(_sx_tool_autoremove,0),
+		exec(
+			_sx_tool_remove_delay_count = 0.0,
+			_sx_toolButtonsInvert = 0,
+			_sx_tool_removed = 0,
+			_sx_tool_removed_num = 0
+		)
+	);
+#Loop5
+
+	
+
+	
+
+
+	;END
+

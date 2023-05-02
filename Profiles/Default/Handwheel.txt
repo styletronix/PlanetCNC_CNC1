@@ -1,0 +1,51 @@
+cmd: "Machine.Emergency_Stop" "" num=0x0001
+cmd: "Machine.Emergency_Stop" "" num=0x0100
+cmd: "Machine.Start" "" num=0x0002
+cmd: "Machine.Start" "" num=0x0200
+expr: "_pause_optional = _pause_optional == 0" "" num=0x0003
+cmd: "Machine.Stop" "" num=0x0300
+
+expr: "startcode('G65 P297 Q0')" "Messung wählen" num=0x0004
+expr: "startcode('G65 P297 Q0')" "Messung wählen" num=0x0400
+expr: "startcode('M201 Q1')" "SetZeroBySelectedAxis" num=0x0005
+expr: "startcode('M201 Q1')" "SetZeroBySelectedAxis" num=0x0500
+expr: "startcode('M201 Q1')" "SetZeroBySelectedAxis" num=0x0006
+expr: "startcode('M201 Q1')" "SetZeroBySelectedAxis" num=0x0600
+
+
+cmd: "Machine.Flood" "" num=0x0007
+cmd: "Machine.Mist" "" num=0x0700
+
+cmd: "Machine.Coordinate_System.Measure_Height" "" num=0x0008
+cmd: "Machine.Coordinate_System.Measure_Height" "" num=0x0800
+cmd: "Machine.Tool_Offset.Measure_Length" "" num=0x0009
+cmd: "Machine.Tool_Offset.Measure_Length" "" num=0x0900
+
+cmd: "Machine.Move.To_Zero" "" num=0x000a
+cmd: "Machine.Home" "" num=0x0a00
+
+expr: "startcode('M300 Q0')" "Spindel CW" num=0x000b
+expr: "startcode('M300 Q1')" "Spindel CCW" num=0x0b00
+
+cmd: "Machine.Home" "Referenzfahrt" num=0x10001
+expr: "startcode('M106')" "Parken" num=0x10002
+
+cmd: "Machine.Flood" "Oel" num=0x10101
+cmd: "Machine.Mist" "Wasser" num=0x10102
+expr: "out(_sx_schwenkantrieb_output - 1, _hw_output_num|_sx_schwenkantrieb_output == 0)" "Oelschlauch" num=0x10103
+expr: "out(_sx_niederhalter_pin - 1,_hw_output_num|_sx_niederhalter_pin == 0)" "Niederhalter" num=0x10104
+
+expr: "_extout1_num|_sx_wireless_probe_on_extout1 = _extout1_num|_sx_wireless_probe_on_extout1 == 0" "Sonde An/Aus" num=0x10105
+expr: "startcode('M110 P8')" "Stop bei Sonde" num=0x10106
+
+expr: "startcode('M112 P#<_hw_mpg_custom>')" "Werkzeug T" num=0x10201 param="0|1|0|10"
+expr: "startcode('G59 P#<_hw_mpg_custom>')" "KoordSys C" num=0x10202 param="1|1|1|999"
+expr: "_sx_multiCS_enabled = XOR(_sx_multiCS_enabled,EXP2(_hw_mpg_custom - 1))" "AutoStart C" num=0x10204 param="1|1|1|9"
+
+expr: "_sx_tool_temperature_max = _hw_mpg_custom * _sx_tool_temperature_celcius_factor" "Temp Pause" num=0x10301 param="40|1|20|130"
+expr: "_sx_tool_temperature_critical = _hw_mpg_custom * _sx_tool_temperature_celcius_factor" "Temp EStop" num=0x10302 param="40|1|20|130"
+
+expr: "startcode('G65 P297 Q1')" "M1 Nut rechts" num=0x10401
+expr: "startcode('G65 P297 Q2')" "M2 Nut links" num=0x10402
+expr: "startcode('G65 P297 Q3')" "M3 Kante links" num=0x10403
+expr: "startcode('G65 P297 Q4')" "M3 Tiefe" num=0x10404

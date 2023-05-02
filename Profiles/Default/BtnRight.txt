@@ -1,0 +1,10 @@
+expr: "_sx_onend_mode = 0" "" tooltip="Beim ende nichts unternehmen" image="Icons/nop.svg" imagechange="true" updown="_sx_onend_mode == 0" updatefast="true" color=#7070ff
+expr: "_sx_onend_mode = 1" "" tooltip="Beim ende auf Flughöhe" image="Icons/flight.svg" imagechange="true" updown="_sx_onend_mode == 1" updatefast="true" color=#7070ff
+expr: "_sx_onend_mode = 2" "" tooltip="Beim ende auf Parkposition fahren" image="Icons/parking.svg" imagechange="true" updown="_sx_onend_mode == 2" updatefast="true" color=#7070ff
+expr: "_sx_onend_mode = 3" "" tooltip="Beim ende auf G28 fahren" image="Icons/IMG_GoToG28.svg" imagechange="true" updown="_sx_onend_mode == 3" updatefast="true" color=#7070ff stroke=1.1
+expr: "_sx_onend_mode = 4" "" tooltip="Beim ende Werkzeug wechseln" imagechange="true" updown="_sx_onend_mode == 4" updatefast="true" image="Icons/T_change.svg" color=#7070ff
+*** 
+---
+expr: "_sx_hasError = 0" "" image="Icons/error.svg" enable="_sx_hasError == 1" updown="_sx_hasError == 1" updatefast="true" tooltip="Fehler bestätigen" color=#ff0000
+expr: "exec(_sx_tool_temperature = _sx_tool_temperature == 0, _sx_tool_temperature_ok = 1)" "" image="Icons/temp.svg" tooltip="Werkzeugtemperatur überwachen" updown="_sx_tool_temperature == 1" updatefast="true" color=#00aa00 stroke=1.1
+expr: "_sx_debug = _sx_debug == 0" "Debug" tooltip="Debug Modus" imagechange="true" updown="_sx_debug == 1" updatefast="true" color=#00aa00 stroke=1.1

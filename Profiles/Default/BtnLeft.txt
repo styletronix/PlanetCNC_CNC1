@@ -1,0 +1,12 @@
+cmd: "Machine.Move.To_Zero" "" image="Icons/IMG_GoToZero.svg" imagechange="true"
+cmd: "Machine.Move.To_G28" "" image="Icons/IMG_GoToG28.svg" imagechange="true"
+cmd: "Machine.Move.To_G30" "" image="Icons/IMG_GoToG30.svg" imagechange="true"
+expr: "startcode('M102')" "" image="Icons/flight.svg" imagechange="true" stroke=1.1 enable="_hw_idle == 1"
+expr: "startcode('M106')" "" image="Icons/parking.svg" imagechange="true" enable="_hw_idle == 1"
+---
+cmd: "Machine.Home" "" updown="_sx_machine_home_required==1" image="Icons/IMG_Home.svg" imagechange="true" stroke=1.1 updatefast="true"
+***
+expr: "startcode('M201 H0')" "" enable="_hw_idle == 1" updown="_hw_work_x == 0" updatefast="true" image="Icons/IMG_OffsetX.svg" imagechange="true" color=#00aa00 stroke=1.1
+expr: "startcode('M201 H1')" "" enable="_hw_idle == 1" updown="_hw_work_y == 0" updatefast="true" image="Icons/IMG_OffsetY.svg" imagechange="true" color=#00aa00 stroke=1.1
+expr: "startcode('M201 H2')" "" enable="_hw_idle == 1" updown="_hw_work_z == 0" updatefast="true" image="Icons/IMG_OffsetZ.svg" imagechange="true" color=#00aa00 stroke=1.1
+expr: "startcode('G10 L20 P#<_coordsys> R0')" "R=0" enable="_hw_idle == 1" updown="_coordsys_rot == 0" updatefast="true" imagechange="true" color=#00aa00 stroke=1.1

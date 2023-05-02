@@ -1,0 +1,33 @@
+cmd: "Machine.Emergency_Stop" "" image="Icons/IMG_EStop.svg"
+---
+cmd: "File.Open_..." "" image="Icons/IMG_FileOpen.svg" imagechange="true"
+---
+cmd: "Machine.Start" "" image="Icons/IMG_Start.svg" imagechange="true" color=#00aa00 
+cmd: "Machine.Stop" "" image="Icons/IMG_Stop.svg" imagechange="true" color=#8888ff 
+cmd: "Machine.Pause" "" image="Icons/IMG_Pause.svg" imagechange="true" color=#ffff88 
+cmd: "Machine.Override.Pause_Optional" "" image="Icons/Pause_Optional.svg" imagechange="true" color=#ffff88
+expr: "_pause_optional = _pause_optional == 0 " "" image="Icons/Pause_Optional.svg" imagechange="true" color=#ffff88 updown="_pause_optional == 1" updatefast="true"
+---
+cmd: "View.Top_View" "" image="Icons/IMG_ViewTop.svg" imagechange="true"
+cmd: "View.Side_View" "" image="Icons/IMG_ViewSide.svg" imagechange="true"
+cmd: "View.Front_View" "" image="Icons/IMG_ViewFront.svg" imagechange="true"
+cmd: "View.Perspective_View" "" image="Icons/IMG_ViewPerspective.svg" imagechange="true"
+---
+cmd: "View.Zoom_In" "" image="Icons/IMG_ZoomIn.svg" imagechange="true"
+cmd: "View.Zoom_Out" "" image="Icons/IMG_ZoomOut.svg" imagechange="true"
+cmd: "View.Zoom_Position" "" image="Icons/IMG_ZoomPosition.svg" imagechange="true"
+cmd: "View.Zoom_Part" "" image="Icons/IMG_ZoomPart.svg" imagechange="true"
+***
+cmd: "Machine.Mist" "" image="Icons/IMG_Mist.svg" imagechange="true"
+cmd: "Machine.Flood" "" image="Icons/IMG_Flood.svg" imagechange="true"
+;cmd: "Machine.Spindle" "" image="Icons/IMG_Spindle.svg" imagechange="true"
+expr: "startcode('M300 Q0')" image="Icons/IMG_Spindle.svg" imagechange="true" updatefast="true"
+---
+expr: "out(_sx_niederhalter_pin - 1,_hw_output_num|_sx_niederhalter_pin == 0)" "" enable="_hw_estop == 0" updown="_hw_output_num|_sx_niederhalter_pin == 1" tooltip="Niederhalter Ein/Aus" image="Icons/clamp2.svg" updatefast="true"
+expr: "out(_sx_schwenkantrieb_output - 1, _hw_output_num|_sx_schwenkantrieb_output == 0)" "" enable="_hw_estop == 0" image="Icons/Flood_schwenk.svg" updown="_hw_output_num|_sx_schwenkantrieb_output == 1" tooltip="Schwenkantrieb für Öl Ein/Aus" imagechange="true" updatefast="true"
+expr: "extout1(_sx_wireless_probe_on_extout1 -1, _extout1_num|_sx_wireless_probe_on_extout1 == 0)" "" enable="_hw_estop == 0" updown="_extout1_num|_sx_wireless_probe_on_extout1 == 1" image="Icons/Probe_wireless.svg" updatefast="true"
+expr: "extout1(_sx_ausblasen_pin_ext1 -1, _extout1_num|_sx_ausblasen_pin_ext1 == 0)" "Clean" enable="_hw_estop == 0" updown="_extout1_num|_sx_ausblasen_pin_ext1 == 1" updatefast="true" imagechange="true"
+expr: "startcode('M110 P8')" "" enable="_hw_estop == 0" updown="_probe_pin_2 == _sx_wireless_probe_in && _hw_limits_en == 1" image="Icons/Probe_stop.svg"
+***
+cmd: "Machine.Limits.Soft_Limits_Enable" "Soft- Limit"
+cmd: "Machine.Limits.Hard_Limits_Enable" "Hard- Limit"

@@ -1,0 +1,60 @@
+#Loop
+	;; Calculate real Temperature
+	
+	_sx_tool_temperature_celcius_current = _hw_aux2 / _sx_tool_temperature_celcius_factor;
+	_sx_tool_temperature_celcius_max = _sx_tool_temperature_max / _sx_tool_temperature_celcius_factor;
+	_sx_tool_temperature_celcius_critical = _sx_tool_temperature_critical / _sx_tool_temperature_celcius_factor;
+
+	;; Sensor connected to AUX2
+	if( EQ(_sx_tool_temperature,1) 
+		&& EQ(_hw_isprog,1)
+		&& EQ(_sx_tool_temperature_suspend,0)
+		&& GT(_hw_aux2,_sx_tool_temperature_critical), 
+			exec(
+				_sx_hasError = 1, 
+				cmd('Machine.Stop'), 
+				msg('Temperaturwarnung Kritisch')
+			)
+	);
+	
+	if( EQ(_sx_tool_temperature,1) 
+		&& EQ(_hw_isprog,1)
+		&& EQ(_sx_tool_temperature_suspend,0)
+		&& GT(_hw_aux2,_sx_tool_temperature_max), 
+			exec(
+				_pause_optional = 1,
+				_sx_tool_temperature_ok = 0
+			)
+	);
+	
+	;; Remember max temperature during operation
+	if( LT(_sx_tool_temperature_current_max,_hw_aux2)
+		&& EQ(_hw_isprog,1)
+		&& EQ(_sx_tool_temperature_suspend,0), 
+			exec(
+				_sx_tool_temperature_current_max = _hw_aux2,
+				_sx_tool_temperature_celcius_current_max = _sx_tool_temperature_current_max / _sx_tool_temperature_celcius_factor
+			)
+	);
+	
+	if( EQ(_sx_tool_temperature,0)
+		|| EQ(_sx_tool_temperature_suspend,1),
+			_sx_led_toolTemp = -1, 
+				_sx_led_toolTemp = _sx_tool_temperature_ok
+	);
+	;END
+
+#OnInit
+	print('OnInit Expr2');
+	_sx_tool_temperature_current_max = 0;
+	_sx_tool_temperature_ok = 1;
+	_sx_led_toolTemp = -1;
+	_sx_tool_temperature_suspend = 1;
+	_sx_tool_temperature_celcius_factor = 6.38;
+	;END
+
+#OnStart
+	_sx_tool_temperature_current_max = 0;
+	_sx_tool_temperature_ok = 1;
+	_sx_tool_temperature_suspend = 0;
+	;END

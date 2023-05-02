@@ -1,0 +1,127 @@
+#Loop
+
+	;END
+
+
+#Loop5
+
+	;END
+
+
+#Loop15
+
+
+	;END
+
+
+#Loop60
+
+
+	;END
+
+
+#Loop300
+
+
+	;END
+
+
+#OnInit
+	if( _sx_debug, print('OnInit Expr') );
+	_sx_canceled = 0;
+	
+	;BEGIN Parameters ATC
+		_sx_tool_loaded_pin = 3;
+		_sx_tool_released_pin = 2;
+		_sx_cover_open_pin = 5;
+		_sx_atc_safex = 60.0;
+		;END
+
+	;BEGIN Parameters Common
+		_sx_niederhalter_pin = 1;
+		_sx_niederhalter_oben_input = 5;
+		_sx_schwenkantrieb_output = 6;
+		_sx_machine_flightheight_z = 255.0;
+		_sx_sim_input_wkz_spannzange = 0;
+		_sx_park_position_x = 5;
+		_sx_park_position_y = 5;
+		_sx_ausblasen_pin_ext1 = 2;
+		_sx_sperrluft_pin_ext1 = 3;
+		;END
+
+	;END
+
+
+#OnStart
+	if( _sx_debug, print('OnStart Expr') );
+	if(NE(_sx_sperrluft_pin_ext1,0), EXEC(_extout1_num|_sx_sperrluft_pin_ext1 = 1));
+	_sx_canceled = 0;
+	;END
+
+
+#OnPause
+	if( _sx_debug, print('OnPause Expr') );
+	if(NE(_sx_sperrluft_pin_ext1,0), EXEC(_extout1_num|_sx_sperrluft_pin_ext1 = 0));
+		
+	;END
+
+
+#OnStop
+	if( _sx_debug, print('OnStop Expr') );
+	
+	if( _spindle_on,
+		CMD('Machine.Spindle')
+		);
+	
+	if( _mist_on,
+		CMD('Machine.Mist')
+		);
+	
+	if( _flood_on,
+		CMD('Machine.Flood')
+		);
+	
+	if(NE(_sx_sperrluft_pin_ext1,0), EXEC(_extout1_num|_sx_sperrluft_pin_ext1 = 0));
+	_sx_canceled = 1;
+	
+	;END
+
+
+#OnEStop
+	if( _sx_debug, print('OnEStop Expr') );
+	if(NE(_sx_sperrluft_pin_ext1,0), EXEC(_extout1_num|_sx_sperrluft_pin_ext1 = 0));
+	_sx_canceled = 1;
+
+	;END
+
+
+#OnEnd
+	if( _sx_debug, print('OnEnd Expr') );
+	if(NE(_sx_sperrluft_pin_ext1,0), EXEC(_extout1_num|_sx_sperrluft_pin_ext1 = 0));
+
+	;END
+
+
+#OnJog
+	if( _sx_debug, print('OnJog Expr') );
+
+	;END
+
+
+#OnWheel
+	if( _sx_debug, print('OnWheel Expr') );
+
+	;END
+
+
+#OnCmd
+	if( _sx_debug, print('OnCmd Expr') );
+
+	;END
+
+
+#OnShutdown
+	if( _sx_debug, print('OnShutdown Expr') );
+	_sx_canceled = 1;
+
+	;END

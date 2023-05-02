@@ -1,0 +1,48 @@
+#Loop
+	;; Using CS buttons in UI to enable different coordinate systems to do work.
+	;; While machine is working on one cs, another part can be prepared at a different cs and enabled for automatic continue at that location.
+	if( EQ(_hw_stop,1) 
+	&& EQ(_sx_machine_home_required,0) 
+	&& EQ(_sx_hasError,0) 
+	&& GT(_sx_multiCS_enabled,0) 
+	&& EQ(_sx_multiCS_start,1), 
+		exec(
+			_sx_multiCS_start = 0, 
+			print('Auto-Start fuer naechstes CS') ,
+			cmd('Machine.Start')
+		)
+	);
+	;END
+
+#OnInit
+	_sx_multiCS_start = 0;
+	;; Bits used for CS selection 0=off 1=CS1 2=CS2 4=C3  6=CS3 and CS2;
+	_sx_multiCS_enabled = 0;
+	;END
+
+#OnStart
+	_sx_multiCS_start = 0;
+	;END
+
+#OnStop
+	_sx_multiCS_start = 0;
+	;END
+
+#OnEStop
+	_sx_multiCS_start = 0;
+	;END
+
+#OnEnd
+	if( EQ(_hw_estop,0) 
+		&& EQ(_sx_machine_home_required,0) 
+		&& EQ(_sx_hasError,0) 
+		&& GT(_sx_multiCS_enabled,0),
+			exec(
+				_sx_multiCS_start = 1
+			)
+	);
+	;END
+
+#OnShutdown
+	_sx_multiCS_start = 0;
+	;END

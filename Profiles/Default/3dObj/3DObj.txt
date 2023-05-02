@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Model>
+	<Color Value="ffffffff"/>
+	<Assembly>
+		<Items>
+			<Part Name="Table">
+				<Cuboid X="0" Y="0" Z="0" L="1600" W="3000" H="-20"/>
+				<Color Value="ffaaaaaa"/>
+			</Part>
+			<Part Name="Schraubstock">
+				<Mesh Filename="Schraubstock.STL"/>
+				<Color Value="ffaa0000"/>
+				<Transform X="230" Y="370" Z="100"/>
+			</Part>
+			<Part Name="WLS" Enable="true">
+				<Mesh Filename="WLS.STL"/>
+				<Color Value="ffaa0000"/>
+				<Transform X="9" Y="6" Z="0"/>
+			</Part>
+			<Part Name="Demo" Enable="true">
+				<Mesh Filename="demo.STL"/>
+				<Color Value="ffff5050"/>
+				<Transform X="400" Y="80" Z="30"/>
+			</Part>
+			<Part Name="T1">
+				<Mesh Filename="ISO30_TH.STL"/>
+				<Color Value="ffffff00"/>
+				<Transform X="1.6" Y="159" Z="154"/>
+			</Part>
+			<Part Name="T1_T">
+				<Mesh Filename="ISO30.STL"/>
+				<Color Value="ffaaaaaa"/>
+				<Transform X="1.6" Y="159" Z="154"/>
+			</Part>	
+			<Part Name="T2">
+				<Mesh Filename="ISO30_TH.STL"/>
+				<Color Value="ffffff00"/>
+				<Transform X="1.6" Y="279" Z="154"/>
+			</Part>
+			<Part Name="T2_T">
+				<Mesh Filename="ISO30.STL"/>
+				<Color Value="ffaaaaaa"/>
+				<Transform X="1.6" Y="279" Z="154"/>
+			</Part>	
+			<Part Name="T3">
+				<Mesh Filename="ISO30_TH.STL"/>
+				<Color Value="ffffff00"/>
+				<Transform X="1.6" Y="399" Z="154"/>
+			</Part>
+			<Part Name="T3_T">
+				<Mesh Filename="ISO30.STL"/>
+				<Color Value="ffaaaaaa"/>
+				<Transform X="1.6" Y="399" Z="154"/>
+			</Part>
+			<Part Name="T4">
+				<Mesh Filename="ISO30_TH.STL"/>
+				<Color Value="ffffff00"/>
+				<Transform X="1.6" Y="519" Z="154"/>
+			</Part>
+			<Part Name="T4_T">
+				<Mesh Filename="ISO30.STL"/>
+				<Color Value="ffaaaaaa"/>
+				<Transform X="1.6" Y="519" Z="154"/>
+			</Part>
+			<Part Name="T5">
+				<Mesh Filename="ISO30_TH.STL"/>
+				<Color Value="ffffff00"/>
+				<Transform X="1.6" Y="639" Z="154"/>
+			</Part>
+			<Part Name="T5_T">
+				<Mesh Filename="ISO30.STL"/>
+				<Color Value="ffaaaaaa"/>
+				<Transform X="1.6" Y="639" Z="154"/>
+			</Part>
+			<Part Name="T6">
+				<Mesh Filename="ISO30_TH.STL"/>
+				<Color Value="ffffff00"/>
+				<Transform X="1.6" Y="759" Z="154"/>
+			</Part>
+			<Part Name="T6_T">
+				<Mesh Filename="ISO30.STL"/>
+				<Color Value="ffaaaaaa"/>
+				<Transform X="1.6" Y="759" Z="154"/>
+			</Part>
+			<Part Name="T7">
+				<Mesh Filename="ISO30_TH.STL"/>
+				<Color Value="ffffff00"/>
+				<Transform X="1.6" Y="879" Z="154"/>
+			</Part>
+			<Part Name="T7_T">
+				<Mesh Filename="ISO30.STL"/>
+				<Color Value="ffaaaaaa"/>
+				<Transform X="1.6" Y="879" Z="154"/>
+			</Part>
+			<Part Name="T8">
+				<Mesh Filename="ISO30_TH.STL"/>
+				<Color Value="ffffff00"/>
+				<Transform X="1.6" Y="999" Z="154"/>
+			</Part>
+			<Part Name="T8_T">
+				<Mesh Filename="ISO30.STL"/>
+				<Color Value="ffaaaaaa"/>
+				<Transform X="1.6" Y="999" Z="154"/>
+			</Part>
+			<Part Name="T9">
+				<Mesh Filename="ISO30_TH.STL"/>
+				<Color Value="ffffff00"/>
+				<Transform X="1.6" Y="1119" Z="154"/>
+			</Part>
+			<Part Name="T9_T">
+				<Mesh Filename="ISO30.STL"/>
+				<Color Value="ffaaaaaa"/>
+				<Transform X="1.6" Y="1119" Z="154"/>
+			</Part>
+			<Part Name="T10">
+				<Mesh Filename="ISO30_TH.STL"/>
+				<Color Value="ffffff00"/>
+				<Transform X="1.6" Y="1239" Z="154"/>
+			</Part>
+			<Part Name="T10_T">
+				<Mesh Filename="ISO30.STL"/>
+				<Color Value="ffaaaaaa"/>
+				<Transform X="1.6" Y="1239" Z="154"/>
+			</Part>
+
+			<Assembly Enable="true">
+				<Move X="1" Y="0" Z="0" RX="0" RY="0" RZ="0" CX="0" CY="0" CZ="0"/>
+				<Items>	
+					<Assembly>
+						<Move X="0" Y="1" Z="0" RX="0" RY="0" RZ="0" CX="0" CY="0" CZ="0"/>
+						<Items>
+							<Assembly>
+								<Move X="0" Y="0" Z="1" RX="0" RY="0" RZ="0" CX="0" CY="0" CZ="0"/>
+								<Items>
+									<Part Name="Spindel">
+										<Mesh Filename="Spindel.STL"/>
+										<Color Value="ff20aaaa"/>
+										<Transform X="0" Y="0" Z="0"/>
+									</Part>
+									<Part Name="ISO30">
+										<Mesh Filename="ISO30.STL"/>
+										<Color Value="ffaaaa00"/>
+										<Transform X="0" Y="0" Z="0"/>
+									</Part>	
+									<Part Name="Niederhalter">
+										<Mesh Filename="Niederhalter.STL"/>
+										<Color Value="ffaa5555"/>
+										<Transform X="0" Y="0" Z="0"/>
+									</Part>	
+								</Items>
+							</Assembly>
+						</Items>
+					</Assembly>
+				</Items>
+			</Assembly>
+		</Items>
+	</Assembly>
+</Object>

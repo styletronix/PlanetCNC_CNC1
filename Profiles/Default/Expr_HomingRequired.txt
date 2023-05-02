@@ -1,0 +1,10 @@
+#OnInit
+	if( _sx_debug, print('_sx_machine_home_required = 1') );
+	_sx_machine_home_required = 1;
+	;END
+
+#OnEStop
+	if( _sx_debug, print('_sx_machine_home_required = 1') );
+	
+	_sx_machine_home_required = 1;
+	;END

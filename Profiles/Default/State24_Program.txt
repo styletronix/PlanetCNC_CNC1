@@ -1,0 +1,47 @@
+name "Program"
+
+label "GCode" colorname=#ffa500
+param _prog_linecount 0 "Lines"
+param _prog_totallen 1 "Length"
+param _prog_totaltime T "Run Time"
+param _prog_totaltime 0 "Run Time"
+---
+label "Speed & Spindle" colorname=#ffa500
+param _prog_minspeed 2 "Min Speed"
+param _prog_maxspeed 2 "Max Speed"
+param _prog_minspindle 1 "Min Spindle"
+param _prog_maxspindle 1 "Max Spindle"
+---
+label "Min" colorname=#ffa500
+param _prog_min_x 3 "Min X"
+param _prog_min_y 3 "Min Y"
+param _prog_min_z 3 "Min Z"
+param [_prog_min_z - workoff_z] 3 "Min Z Work"
+
+---
+label "Max" colorname=#ffa500
+param _prog_max_x 3 "Max X"
+param _prog_max_y 3 "Max Y"
+param _prog_max_z 3 "Max Z"
+---
+label "MinTraverse" colorname=#ffa500
+param _prog_mintrav_x 3 "MinTrav X"
+param _prog_mintrav_y 3 "MinTrav Y"
+param _prog_mintrav_z 3 "MinTrav Z"
+---
+label "MaxTraverse" colorname=#ffa500
+param _prog_maxtrav_x 3 "MaxTrav X"
+param _prog_maxtrav_y 3 "MaxTrav Y"
+param _prog_maxtrav_z 3 "MaxTrav Z"
+---
+label "MinFeed" colorname=#ffa500
+param _prog_minfeed_x 3 "MinFeed X"
+param _prog_minfeed_y 3 "MinFeed Y"
+param _prog_minfeed_z 3 "MinFeed Z"
+---
+label "MaxFeed" colorname=#ffa500
+param _prog_maxfeed_x 3 "MaxFeed X"
+param _prog_maxfeed_y 3 "MaxFeed Y"
+param _prog_maxfeed_z 3 "MaxFeed Z"
+
+			

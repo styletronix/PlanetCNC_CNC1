@@ -1,0 +1,67 @@
+#Loop15
+	;BEGIN Reset Timeout if Probe turned on.
+		if( EQ(_extout1_num|_sx_wireless_probe_on_extout1,1)
+			&& EQ(_sx_wireless_probe_laststate, 0),
+				exec(
+					_sx_wireless_probe_lastused = DATETIME(),
+					_sx_wireless_probe_laststate = 1,
+					print("Timeout für Wireless-Sonde wurde aktualisiert")
+				)
+		);
+	
+		if( EQ(_extout1_num|_sx_wireless_probe_on_extout1,0)
+			&& EQ(def(_sx_wireless_probe_laststate,0),1),
+				exec(
+					_sx_wireless_probe_laststate = 0
+				)
+		);
+	;END
+	
+	;BEGIN Automatic power off on timeout.
+		if( EQ(_extout1_num|_sx_wireless_probe_on_extout1,1) 
+			&& EQ(_hw_idle,1) 
+			&& EQ(_hw_stop ,1) 
+			&& LT(_sx_wireless_probe_lastused + _sx_wireless_probe_timeout , DATETIME()), 
+				exec(
+					_extout1_num|_sx_wireless_probe_on_extout1 = 0,
+					print("Timeout für Wireless-Sonde erreicht - Sonde wird abgeschaltet")
+			)
+		);
+	;END
+	;END
+
+
+#OnInit
+	if( _sx_debug, print('OnInit Expr Wireless Probe') );
+
+	;; Settings to configure Wireless Probe based on hardware
+	;; Timeout in seconds before probe is turned off.
+	_sx_wireless_probe_timeout = 600;		
+
+	;; Input used for ERR signal from probes receiver
+	_sx_wireless_probe_error_in = 4;
+
+	;; Input where NPN out of Probe is connected to			
+	_sx_wireless_probe_in = 7;	
+
+	;; Output for turning probe on.			
+	_sx_wireless_probe_on_extout1 = 1;
+
+	;; DATETIME when probe was last used
+	_sx_wireless_probe_lastused = 0;
+	_sx_wireless_probe_laststate = 0;
+	;END
+
+
+#OnJog
+	if( EQ(_tool_isprobe_num|_current_tool,1),
+		_sx_wireless_probe_lastused = DATETIME()
+	);
+	;END
+
+
+#OnWheel
+	if( EQ(_tool_isprobe_num|_current_tool,1),
+		_sx_wireless_probe_lastused = DATETIME()
+	);
+	;END

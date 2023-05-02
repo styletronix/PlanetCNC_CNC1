@@ -1,0 +1,26 @@
+; External Python script for sending machine state to monitoring system.
+#Loop5
+	_sx_hmi_status_ready = EQ(_hw_estop + _sx_machine_home_required + _sx_hasError,0);
+	_sx_hmi_status_running = _hw_isprog;
+	_sx_hmi_status_warning = _hw_pause + _pause_optional;
+	_sx_hmi_status_exception = _hw_estop + _sx_hasError;
+	_sx_hmi_progress = def(_progress,0) * 100;
+	_sx_hmi_timetoend = def(_progress_timetoend,0);
+;END
+	
+#OnInit
+	_sx_module_stop = 0;
+	_sx_hmi_status_ready = 0;
+	_sx_hmi_status_running = 0;
+	_sx_hmi_status_warning = 0;
+	_sx_hmi_status_exception = 0;
+	_sx_hmi_progress = 0;
+	_sx_hmi_timetoend = 0;
+	
+	pythr('Python\wwsmax.py');
+;END
+
+
+#OnShutdown
+	_sx_module_stop = 1;
+;END

@@ -1,0 +1,22 @@
+name "Status"
+io custom colorname=#ffa500 size=35 width=40 name="Temperaturüberwachung" led="_sx_led_toolTemp|-1|TEMP,_sx_tool_temperature|-1|AN,_sx_tool_temperature_ok|-1|OK"
+param _sx_tool_temperature_celcius_current 0 "Temperatur"
+param _sx_tool_temperature_celcius_current_max 0 "Aktuelles maximum"
+param _sx_tool_temperature_celcius_max 0 "Pause ab"
+param _sx_tool_temperature_celcius_critical 0 "Not-Stop ab"
+---
+label "Fehlerüberwachung" colorname=#ffa500
+io custom size=35 name="Motor controller X Y Z" led="_hw_input_num|8|XYZ"
+io custom size=35 name="Motor controller A" led="_extin1_num|4|A"
+io custom size=35 name="Spindel FU Störung" led="_extin1_num|5|FU"
+io custom size=35 name="Spindel Temperatur" led="_hw_input_num|6|TP"
+io custom size=35 name="Druckluft" led="_extin1_num|6|AI"
+---
+label "Eingänge und Ausgänge" colorname=#ffa500
+io custom colorname=#ffa500 size=35 name="Controller:" led="ES,,SL,LM,MT,AL" ;ES,SL,LM,MT,ER,On,In,Ln,Jn,Cn
+io output colorname=#ffa500
+io input colorname=#ffa500
+io limit colorname=#ffa500
+io extin1 colorname=#ffa500
+io extout1 colorname=#ffa500
+---
