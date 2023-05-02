@@ -27,7 +27,7 @@
 				<Color Value="ffffff00"/>
 				<Transform X="1.6" Y="159" Z="154"/>
 			</Part>
-			<Part Name="T1_T">
+			<Part Name="T1_T" Visible="NE(AND(_sx_tool_atc_occupied,EXP2(0)),0)">
 				<Mesh Filename="ISO30.STL"/>
 				<Color Value="ffaaaaaa"/>
 				<Transform X="1.6" Y="159" Z="154"/>
@@ -37,7 +37,7 @@
 				<Color Value="ffffff00"/>
 				<Transform X="1.6" Y="279" Z="154"/>
 			</Part>
-			<Part Name="T2_T">
+			<Part Name="T2_T" Visible="NE(AND(_sx_tool_atc_occupied,EXP2(1)),0)">
 				<Mesh Filename="ISO30.STL"/>
 				<Color Value="ffaaaaaa"/>
 				<Transform X="1.6" Y="279" Z="154"/>
@@ -47,7 +47,7 @@
 				<Color Value="ffffff00"/>
 				<Transform X="1.6" Y="399" Z="154"/>
 			</Part>
-			<Part Name="T3_T">
+			<Part Name="T3_T" Visible="NE(AND(_sx_tool_atc_occupied,EXP2(2)),0)">
 				<Mesh Filename="ISO30.STL"/>
 				<Color Value="ffaaaaaa"/>
 				<Transform X="1.6" Y="399" Z="154"/>
@@ -57,7 +57,7 @@
 				<Color Value="ffffff00"/>
 				<Transform X="1.6" Y="519" Z="154"/>
 			</Part>
-			<Part Name="T4_T">
+			<Part Name="T4_T" Visible="NE(AND(_sx_tool_atc_occupied,EXP2(3)),0)">
 				<Mesh Filename="ISO30.STL"/>
 				<Color Value="ffaaaaaa"/>
 				<Transform X="1.6" Y="519" Z="154"/>
@@ -67,7 +67,7 @@
 				<Color Value="ffffff00"/>
 				<Transform X="1.6" Y="639" Z="154"/>
 			</Part>
-			<Part Name="T5_T">
+			<Part Name="T5_T" Visible="NE(AND(_sx_tool_atc_occupied,EXP2(4)),0)">
 				<Mesh Filename="ISO30.STL"/>
 				<Color Value="ffaaaaaa"/>
 				<Transform X="1.6" Y="639" Z="154"/>
@@ -77,7 +77,7 @@
 				<Color Value="ffffff00"/>
 				<Transform X="1.6" Y="759" Z="154"/>
 			</Part>
-			<Part Name="T6_T">
+			<Part Name="T6_T" Visible="NE(AND(_sx_tool_atc_occupied,EXP2(5)),0)">
 				<Mesh Filename="ISO30.STL"/>
 				<Color Value="ffaaaaaa"/>
 				<Transform X="1.6" Y="759" Z="154"/>
@@ -87,7 +87,7 @@
 				<Color Value="ffffff00"/>
 				<Transform X="1.6" Y="879" Z="154"/>
 			</Part>
-			<Part Name="T7_T">
+			<Part Name="T7_T" Visible="NE(AND(_sx_tool_atc_occupied,EXP2(6)),0)">
 				<Mesh Filename="ISO30.STL"/>
 				<Color Value="ffaaaaaa"/>
 				<Transform X="1.6" Y="879" Z="154"/>
@@ -97,7 +97,7 @@
 				<Color Value="ffffff00"/>
 				<Transform X="1.6" Y="999" Z="154"/>
 			</Part>
-			<Part Name="T8_T">
+			<Part Name="T8_T" Visible="NE(AND(_sx_tool_atc_occupied,EXP2(7)),0)">
 				<Mesh Filename="ISO30.STL"/>
 				<Color Value="ffaaaaaa"/>
 				<Transform X="1.6" Y="999" Z="154"/>
@@ -107,7 +107,7 @@
 				<Color Value="ffffff00"/>
 				<Transform X="1.6" Y="1119" Z="154"/>
 			</Part>
-			<Part Name="T9_T">
+			<Part Name="T9_T" Visible="NE(AND(_sx_tool_atc_occupied,EXP2(8)),0)">
 				<Mesh Filename="ISO30.STL"/>
 				<Color Value="ffaaaaaa"/>
 				<Transform X="1.6" Y="1119" Z="154"/>
@@ -117,7 +117,7 @@
 				<Color Value="ffffff00"/>
 				<Transform X="1.6" Y="1239" Z="154"/>
 			</Part>
-			<Part Name="T10_T">
+			<Part Name="T10_T" Visible="NE(AND(_sx_tool_atc_occupied,EXP2(9)),0)">
 				<Mesh Filename="ISO30.STL"/>
 				<Color Value="ffaaaaaa"/>
 				<Transform X="1.6" Y="1239" Z="154"/>
