@@ -13,6 +13,10 @@ o<sim> else
 	#<tool_loaded> = [#<_sx_sim_input_wkz_spannzange> GT 0]
 o<sim> endif
 
+o<chktool> if [#<pvalue> EQ -1] 
+	#<pvalue> = #<_sx_tool_removed_num>
+o<chktool> endif
+
 o<chk> if [[#<_current_tool> EQ 0] AND [AND[#<_sx_tool_atc_occupied>,EXP2[#<pvalue> - 1]] EQ 0] AND [#<_sx_tool_loaded_pin> GT 0] AND #<tool_loaded>] 
 	(dlgname,Werkzeug definieren )
 	(dlg,Werkzeug wird als T#<pvalue> verwendet. Ist dies Korrekt? , typ=label, x=0, w=600, color=0xffffff)

@@ -1,3 +1,5 @@
+expr: "startcode('M112 P-1')" "Verwende letzte T-Nummer" enable="AND(AND(EQ(_current_tool,0),EQ(_sx_tool_loaded_state,2)),GT(_sx_tool_removed_num,0))" tooltip="Neu eingesetztes Werkzeug verwendet die T- Nummer die zuletzt verwendet wurde." imagechange="true" updatefast="true" color=#00aa00 size=180 stroke=1.0
+
 ***
 expr: "_sx_multiCS_enabled = XOR(_sx_multiCS_enabled,1)" "C1" updown="NE(AND(_sx_multiCS_enabled,1),0)" updatefast="true" imagechange="true" stroke=1.1 tooltip="Bei Programmende automatisch mit CS fortsetzen" color=#ff0000
 expr: "_sx_multiCS_enabled = XOR(_sx_multiCS_enabled,2)" "C2" updown="NE(AND(_sx_multiCS_enabled,2),0)" updatefast="true" imagechange="true" stroke=1.1 tooltip="Bei Programmende automatisch mit CS fortsetzen" color=#ff0000
@@ -9,7 +11,8 @@ expr: "_sx_multiCS_enabled = XOR(_sx_multiCS_enabled,64)" "C7" updown="NE(AND(_s
 expr: "_sx_multiCS_enabled = XOR(_sx_multiCS_enabled,128)" "C8" updown="NE(AND(_sx_multiCS_enabled,128),0)" updatefast="true" imagechange="true" stroke=1.1 tooltip="Bei Programmende automatisch mit CS fortsetzen" color=#ff0000
 expr: "_sx_multiCS_enabled = XOR(_sx_multiCS_enabled,256)" "C9" updown="NE(AND(_sx_multiCS_enabled,256),0)" updatefast="true" imagechange="true" stroke=1.1 tooltip="Bei Programmende automatisch mit CS fortsetzen" color=#ff0000
 ***
-expr: "startcode('G65 P297 Q0')" "Messung" stroke=1.1 tooltip="Messauswahl anzeigen" color=#ffff00 size=100
-expr: "startcode('M203')" "Temperatur Einstellung" stroke=1.1 tooltip="Temperaturüberwachung einstellen" color=#ffff00 size=140
-***
-expr: "_sx_sim_input_wkz_spannzange = EQ(_sx_sim_input_wkz_spannzange,0)" "E2" enable="AND(_hw_sim,_sx_tool_autoremove)" updown="_sx_sim_input_wkz_spannzange" updatefast="true" color=#ff0000 size=60
+expr: "startcode('G65 P297 Q0')" "Messung auswählen" tooltip="Messauswahl M1 bis M4 anzeigen" size=160 enable="_hw_idle == 1"
+expr: "startcode('M203')" "Temperatur einstellen" tooltip="Temperaturüberwachung einstellen" size=160 enable="_hw_idle == 1"
+expr: "_sx_tool_autoremove = _sx_tool_autoremove == 0" "Autom. WKZ entfernung" tooltip="WKZ automatisch bei entnahme aus Spannzange entfernen und bei einsetzen neu vermessen." imagechange="true" updown="_sx_tool_autoremove == 1" size=160 color=#00aa00 stroke=1.0
+---
+expr: "_sx_sim_input_wkz_spannzange = EQ(_sx_sim_input_wkz_spannzange,0)" "E2" enable="AND(_hw_sim,_sx_tool_autoremove)" updown="_sx_sim_input_wkz_spannzange" color=#ff0000 size=60
