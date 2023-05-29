@@ -1,37 +1,39 @@
-;Parameters.txt
+;BEGIN Parameters.txt
 	;_sx_tool_removed_num 0
 	;_sx_tool_measurerequired 0
 	;_sx_tool_removed 0
 	;_sx_tool_autoremove 0
+;END
 	
 #OnInit
 	_sx_tool_remove_delay_count = 0;
 	_sx_tool_remove_delay = 2;
-	
+;END
+
 #Loop
 	_sx_tool_loaded_state = 1; 
 	;0 = not active
 	;1 = tool unloaded
 	;2 = tool loaded
 	
-	; NO Simulation - set _sx_tool_loaded_state 
+	;; NO Simulation - set _sx_tool_loaded_state 
 	if( EQ(_hw_sim, 0) && EQ(_hw_input_num|_sx_tool_loaded_pin, 1),
 			_sx_tool_loaded_state = 2
 	);
 
-	; SIMULATION - set _sx_tool_loaded_state 
+	;; SIMULATION - set _sx_tool_loaded_state 
 	if( EQ(_hw_sim, 1) && EQ(_sx_sim_input_wkz_spannzange, 1),
 			_sx_tool_loaded_state = 2
 	);
 
-	; Disable ATR if ATR is off in UI or machine is not in stop position or input-pin for tool detection is not configured
+	;; Disable ATR if ATR is off in UI or machine is not in stop position or input-pin for tool detection is not configured
 	if( EQ(_sx_tool_autoremove, 0) 
     	|| EQ(_hw_stop, 0)
 		|| LE(_sx_tool_loaded_pin, 0) , 
 			_sx_tool_loaded_state = 0
 	);
 
-	; no tool loaded. Increment counter 
+	;; no tool loaded. Increment counter 
 	if( EQ(_sx_tool_loaded_state, 1) && LT(_sx_tool_remove_delay_count, _sx_tool_remove_delay),
 			exec(
 				print('Werkzeug entfernt - Verzögerung aktiv...'),
@@ -39,7 +41,7 @@
 			)
 	);
 
-	; tool loaded. reset counter 
+	;; tool loaded. reset counter 
 	if( GT(_sx_tool_remove_delay_count, 0)
 		&& EQ(_sx_tool_loaded_state, 2),
 			exec(
@@ -49,7 +51,7 @@
 	);
 	
 	
-	; tool removed, delay passed - reset current tool 
+	;; tool removed, delay passed - reset current tool 
 	if( GE(_sx_tool_remove_delay_count,_sx_tool_remove_delay)
 		&& EQ(_sx_tool_loaded_state, 1)
 		&& EQ(_sx_tool_removed, 0),
@@ -62,7 +64,7 @@
 			)
 	);
 
-	; tool loaded after delay. 
+	;; tool loaded after delay. 
 	if( EQ(_sx_tool_removed, 1) && EQ(_sx_tool_loaded_state, 2),
 			exec(
 				print('Werkzeug eingesetzt'),
@@ -71,12 +73,12 @@
 			)
 	);
 
-	; Invert tool Buttons to show free tool slots.
+	;; Invert tool Buttons to show free tool slots.
 	if( NE(_sx_tool_loaded_state, 0),
 			_sx_toolButtonsInvert = EQ(_current_tool, 0) && EQ(_sx_tool_loaded_state, 2)
 	);
 	
-	; Reset if ATR = off
+	;; Reset if ATR = off
 	if( EQ(_sx_tool_autoremove,0),
 		exec(
 			_sx_tool_remove_delay_count = 0,
@@ -85,4 +87,9 @@
 			_sx_tool_removed_num = 0
 		)
 	);
+	
+;END
+
 #Loop5
+
+;END

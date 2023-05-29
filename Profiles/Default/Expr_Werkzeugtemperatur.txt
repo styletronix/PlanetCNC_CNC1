@@ -42,7 +42,7 @@
 			_sx_led_toolTemp = -1, 
 				_sx_led_toolTemp = _sx_tool_temperature_ok
 	);
-	;END
+;END
 
 #OnInit
 	print('OnInit Expr2');
@@ -51,10 +51,10 @@
 	_sx_led_toolTemp = -1;
 	_sx_tool_temperature_suspend = 1;
 	_sx_tool_temperature_celcius_factor = 6.38;
-	;END
+;END
 
 #OnStart
 	_sx_tool_temperature_current_max = 0;
 	_sx_tool_temperature_ok = 1;
 	_sx_tool_temperature_suspend = 0;
-	;END
+;END

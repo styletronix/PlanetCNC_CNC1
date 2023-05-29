@@ -1,4 +1,4 @@
-; External Python script for sending machine state to monitoring system.
+;; External Python script for sending machine state to monitoring system.
 #Loop5
 	_sx_hmi_status_ready = EQ(_hw_estop + _sx_machine_home_required + _sx_hasError,0);
 	_sx_hmi_status_running = _hw_isprog;

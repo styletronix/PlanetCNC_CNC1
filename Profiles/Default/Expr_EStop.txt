@@ -1,8 +1,8 @@
-;Prüfung von _sx_hasError in M999 um Maschinenstart zu verhindern.
+;; Prüfung von _sx_hasError in M999 um Maschinenstart zu verhindern.
 
 
 #Loop
-	;; Error Fehler Endstufe X Y Z
+	;; Error Endstufe X Y Z
 	if(
 		EQ(_sx_hasError,0) 
 		&& EQ(_hw_sim,0) 
@@ -15,7 +15,7 @@
 			)
 	);
 	
-	;; Error Fehler Endstufe A
+	;; Error Endstufe A
 	if(
 		EQ(_sx_hasError,0) 
 		&& EQ(_hw_sim,0) 
@@ -28,7 +28,7 @@
 			)
 	);
 	
-	;; Error Fehler Frequenzumrichter
+	;; Error Frequenzumrichter
 	if(
 		EQ(_sx_hasError,0) 
 		&& EQ(_hw_sim,0) 

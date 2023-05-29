@@ -2,29 +2,24 @@
 
 	;END
 
-
 #Loop5
 
-	;END
-
+;END
 
 #Loop15
 
 
 	;END
 
-
 #Loop60
 
 
 	;END
 
-
 #Loop300
 
 
 	;END
-
 
 #OnInit
 	if( _sx_debug, print('OnInit Expr') );
@@ -51,20 +46,22 @@
 
 	;END
 
-
 #OnStart
 	if( _sx_debug, print('OnStart Expr') );
-	if(NE(_sx_sperrluft_pin_ext1,0), EXEC(_extout1_num|_sx_sperrluft_pin_ext1 = 1));
+	if( NE(_sx_sperrluft_pin_ext1,0), 
+		EXEC(_extout1_num|_sx_sperrluft_pin_ext1 = 1) 
+	);
 	_sx_canceled = 0;
-	;END
-
+;END
 
 #OnPause
-	if( _sx_debug, print('OnPause Expr') );
-	if(NE(_sx_sperrluft_pin_ext1,0), EXEC(_extout1_num|_sx_sperrluft_pin_ext1 = 0));
+	if( _sx_debug, print('OnPause Expr') 
+	);
+	if( NE(_sx_sperrluft_pin_ext1,0), 
+		EXEC(_extout1_num|_sx_sperrluft_pin_ext1 = 0) 
+	);
 		
-	;END
-
+;END
 
 #OnStop
 	if( _sx_debug, print('OnStop Expr') );
@@ -81,44 +78,44 @@
 		CMD('Machine.Flood')
 		);
 	
-	if(NE(_sx_sperrluft_pin_ext1,0), EXEC(_extout1_num|_sx_sperrluft_pin_ext1 = 0));
+	if(NE(_sx_sperrluft_pin_ext1,0), 
+		EXEC(_extout1_num|_sx_sperrluft_pin_ext1 = 0) 
+	);
 	_sx_canceled = 1;
 	
 	;END
 
-
 #OnEStop
 	if( _sx_debug, print('OnEStop Expr') );
-	if(NE(_sx_sperrluft_pin_ext1,0), EXEC(_extout1_num|_sx_sperrluft_pin_ext1 = 0));
+	if(NE(_sx_sperrluft_pin_ext1,0), 
+		EXEC(_extout1_num|_sx_sperrluft_pin_ext1 = 0)
+	);
 	_sx_canceled = 1;
 
-	;END
-
+;END
 
 #OnEnd
 	if( _sx_debug, print('OnEnd Expr') );
-	if(NE(_sx_sperrluft_pin_ext1,0), EXEC(_extout1_num|_sx_sperrluft_pin_ext1 = 0));
+	if(NE(_sx_sperrluft_pin_ext1,0), 
+		EXEC(_extout1_num|_sx_sperrluft_pin_ext1 = 0)
+	);
 
 	;END
-
 
 #OnJog
 	if( _sx_debug, print('OnJog Expr') );
 
 	;END
 
-
 #OnWheel
 	if( _sx_debug, print('OnWheel Expr') );
 
 	;END
 
-
 #OnCmd
 	if( _sx_debug, print('OnCmd Expr') );
 
 	;END
-
 
 #OnShutdown
 	if( _sx_debug, print('OnShutdown Expr') );
