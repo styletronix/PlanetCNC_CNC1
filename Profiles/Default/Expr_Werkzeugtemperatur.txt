@@ -29,12 +29,12 @@
 	
 	;; Remember max temperature during operation
 	if( LT(_sx_tool_temperature_current_max,_hw_aux2)
-		&& EQ(_hw_isprog,1)
-		&& EQ(_sx_tool_temperature_suspend,0), 
+		&& EQ(_hw_isprog ,1)
+		&& EQ(_sx_tool_temperature_suspend ,0), 
 			exec(
 				_sx_tool_temperature_current_max = _hw_aux2,
 				_sx_tool_temperature_celcius_current_max = _sx_tool_temperature_current_max / _sx_tool_temperature_celcius_factor
-			)
+			)´
 	);
 	
 	if( EQ(_sx_tool_temperature,0)
