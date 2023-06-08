@@ -3,6 +3,7 @@
 	;_sx_tool_measurerequired 0
 	;_sx_tool_removed 0
 	;_sx_tool_autoremove 0
+	;_sx_tool_loaded_pin
 ;END
 	
 #OnInit

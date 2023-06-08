@@ -7,8 +7,8 @@
   <serial>13950</serial>
   <controllerCode>CU5Y53GM2C7BAER4NTPA0V8ZWP9E*</controllerCode>
   <computerCode>KUD3WE44N1B4AQN2PECDMBWW2FNT*</computerCode>
-  <applicatonStart>2023/05/01 15:15:47</applicatonStart>
-  <applicatonEnd>2023/05/02 00:20:31</applicatonEnd>
+  <applicatonStart>2023/06/08 09:02:49</applicatonStart>
+  <applicatonEnd>2023/06/08 11:49:50</applicatonEnd>
   <os>Windows 10 (64 bit)</os>
   <cpu>GenuineIntel (2/4)</cpu>
   <mem>8075</mem>
@@ -18,15 +18,15 @@
   <commRd>0</commRd>
   <commErr>0</commErr>
   <commDpl>0</commDpl>
-  <cnt>677</cnt>
-  <tim>89859</tim>
+  <cnt>697</cnt>
+  <tim>93262</tim>
   <lang>GER.txt</lang>
   <codepage>0</codepage>
-  <fileLastOpen>C:\Users\Mitarbeiter.DESKTOP-EBQCM2F\Documents\GCode\AI32137_i2.gcode</fileLastOpen>
+  <fileLastOpen>C:\Users\Mitarbeiter.DESKTOP-EBQCM2F\Documents\GCode\1001.gcode</fileLastOpen>
   <fileRecentSize>30</fileRecentSize>
-  <fileRecentCount>23</fileRecentCount>
+  <fileRecentCount>26</fileRecentCount>
   <speedTraverseOverride>1.00000000000000000000</speedTraverseOverride>
-  <speedFeedOverride>0.96999999999999997335</speedFeedOverride>
+  <speedFeedOverride>1.00000000000000000000</speedFeedOverride>
   <speedSpindleOverride>1.00000000000000000000</speedSpindleOverride>
   <enableExprEval>1</enableExprEval>
   <cameraOffset10>0.00000000000000000000</cameraOffset10>
@@ -67,7 +67,7 @@
   <displayPanelRight>1</displayPanelRight>
   <displayBarLeft>370</displayBarLeft>
   <displayBarRight>475</displayBarRight>
-  <displayBarMid>190</displayBarMid>
+  <displayBarMid>250</displayBarMid>
   <displayDlgX>799</displayDlgX>
   <displayDlgY>384</displayDlgY>
   <displaySetX>865</displaySetX>
@@ -103,14 +103,14 @@
   <displayCSY>432</displayCSY>
   <displayCSW>610</displayCSW>
   <displayCSH>385</displayCSH>
-  <displayPosTab>1</displayPosTab>
-  <displayStateTab>2</displayStateTab>
+  <displayPosTab>0</displayPosTab>
+  <displayStateTab>5</displayStateTab>
   <displayStateTabScroll0>0</displayStateTabScroll0>
   <displayStateTabScroll1>0</displayStateTabScroll1>
   <displayStateTabScroll2>0</displayStateTabScroll2>
   <displayStateTabScroll3>0</displayStateTabScroll3>
   <displayStateTabScroll4>151</displayStateTabScroll4>
-  <displayStateTabScroll5>534</displayStateTabScroll5>
+  <displayStateTabScroll5>0</displayStateTabScroll5>
   <displayStateTabScroll6>0</displayStateTabScroll6>
   <displayStateTabScroll7>0</displayStateTabScroll7>
   <displayStateTabScroll8>0</displayStateTabScroll8>
@@ -136,13 +136,13 @@
   <displayStateTabScroll28>0</displayStateTabScroll28>
   <displayStateTabScroll29>0</displayStateTabScroll29>
   <displayMidTab>0</displayMidTab>
-  <display3DPanX>-860.24200439453125000000</display3DPanX>
-  <display3DPanY>-254.90228271484375000000</display3DPanY>
-  <display3DAngleX>0.00000000000000000000</display3DAngleX>
-  <display3DAngleY>0.00000000000000000000</display3DAngleY>
+  <display3DPanX>342.33105468750000000000</display3DPanX>
+  <display3DPanY>3.18606686592102050781</display3DPanY>
+  <display3DAngleX>-1.25499916076660156250</display3DAngleX>
+  <display3DAngleY>-0.34000003337860107422</display3DAngleY>
   <display3DAngleZ>0.00000000000000000000</display3DAngleZ>
-  <display3DFieldOfView>0.18103693425655364990</display3DFieldOfView>
-  <displayFollowPosition>0</displayFollowPosition>
+  <display3DFieldOfView>0.06979756057262420654</display3DFieldOfView>
+  <displayFollowPosition>1</displayFollowPosition>
   <displayPosition>1</displayPosition>
   <displayGrid>1</displayGrid>
   <displayAxesLines>1</displayAxesLines>
@@ -163,7 +163,7 @@
   <singleStepEnabled>0</singleStepEnabled>
   <pauseOptionalEnabled>0</pauseOptionalEnabled>
   <softLimitsIgnore>0</softLimitsIgnore>
-  <settingsPageNumber>20</settingsPageNumber>
+  <settingsPageNumber>19</settingsPageNumber>
   <description>CNC 1</description>
   <units>0</units>
   <notes></notes>
@@ -474,7 +474,7 @@
   <motorBacklashType>0</motorBacklashType>
   <motorLimitNeg0>3.00000000000000000000</motorLimitNeg0>
   <motorLimitNeg1>3.00000000000000000000</motorLimitNeg1>
-  <motorLimitNeg2>80.00000000000000000000</motorLimitNeg2>
+  <motorLimitNeg2>50.00000000000000000000</motorLimitNeg2>
   <motorLimitNeg3>0.00000000000000000000</motorLimitNeg3>
   <motorLimitNeg4>0.00000000000000000000</motorLimitNeg4>
   <motorLimitNeg5>0.00000000000000000000</motorLimitNeg5>
@@ -552,7 +552,7 @@
   <motionCoordSys2>0</motionCoordSys2>
   <motionLimitNeg0>3.00000000000000000000</motionLimitNeg0>
   <motionLimitNeg1>3.00000000000000000000</motionLimitNeg1>
-  <motionLimitNeg2>80.00000000000000000000</motionLimitNeg2>
+  <motionLimitNeg2>50.00000000000000000000</motionLimitNeg2>
   <motionLimitNeg3>0.00000000000000000000</motionLimitNeg3>
   <motionLimitNeg4>0.00000000000000000000</motionLimitNeg4>
   <motionLimitNeg5>0.00000000000000000000</motionLimitNeg5>
@@ -1063,15 +1063,15 @@
   <exportCSV_Separator>9</exportCSV_Separator>
   <exportCSV_SkipUnusedValue>1</exportCSV_SkipUnusedValue>
   <exportCSV_SkipSameValue>0</exportCSV_SkipSameValue>
-  <mdiHistory0>//&#214;ffnen ...|4</mdiHistory0>
+  <mdiHistory0>//Position verfolgen|273</mdiHistory0>
   <mdiHistory1>//Letzte Datei &#246;ffnen|5</mdiHistory1>
-  <mdiHistory2>//Seitenansicht|266</mdiHistory2>
-  <mdiHistory3>//Ansicht von oben|265</mdiHistory3>
-  <mdiHistory4>//Position verfolgen|273</mdiHistory4>
-  <mdiHistory5>//Benutzerhandbuch ...|1055</mdiHistory5>
-  <mdiHistory6>//Help ...|1053</mdiHistory6>
-  <mdiHistory7>//Zur&#252;cksetzen|1042</mdiHistory7>
-  <mdiHistory8>//Einstellungen ...|225</mdiHistory8>
+  <mdiHistory2>//Einstellungen ...|225</mdiHistory2>
+  <mdiHistory3>//&#214;ffnen ...|4</mdiHistory3>
+  <mdiHistory4>//Seitenansicht|266</mdiHistory4>
+  <mdiHistory5>//Ansicht von oben|265</mdiHistory5>
+  <mdiHistory6>//Benutzerhandbuch ...|1055</mdiHistory6>
+  <mdiHistory7>//Help ...|1053</mdiHistory7>
+  <mdiHistory8>//Zur&#252;cksetzen|1042</mdiHistory8>
   <mdiHistory9>//Model|278</mdiHistory9>
   <mdiHistory10>//Firmware-Aktualisierung|1043</mdiHistory10>
   <mdiHistory11>//&#214;ffnen ...|4</mdiHistory11>
@@ -1098,14 +1098,14 @@
   <mdiHistory32>(print,| Spindel starten)</mdiHistory32>
   <mdiHistory33>(print,|? Spindel starten)</mdiHistory33>
   <mdiHistory34>(print,|b Spindel starten)</mdiHistory34>
-  <fileRecent0>C:\Users\Mitarbeiter.DESKTOP-EBQCM2F\Documents\GCode\AI32137_i2.gcode</fileRecent0>
-  <fileRecent1>C:\Users\Mitarbeiter.DESKTOP-EBQCM2F\Documents\GCode\AI32137_i2_5Teile.gcode</fileRecent1>
-  <fileRecent2>C:\Users\Mitarbeiter.DESKTOP-EBQCM2F\Documents\GCode\AI32137_i2 nur Gewinde.gcode</fileRecent2>
-  <fileRecent3>C:\Users\Mitarbeiter.DESKTOP-EBQCM2F\Documents\GCode\AI32137_i2_Platte_Bohren.gcode</fileRecent3>
+  <fileRecent0>C:\Users\Mitarbeiter.DESKTOP-EBQCM2F\Documents\GCode\1001.gcode</fileRecent0>
+  <fileRecent1>C:\Users\Mitarbeiter.DESKTOP-EBQCM2F\Documents\GCode\AI35157 - 32 Teile.gcode</fileRecent1>
+  <fileRecent2>C:\Users\Mitarbeiter.DESKTOP-EBQCM2F\Desktop\o110.gcode</fileRecent2>
+  <fileRecent3>C:\Users\Mitarbeiter.DESKTOP-EBQCM2F\Documents\GCode\AI35157 - 1 Teil.gcode</fileRecent3>
   <fileRecent4>C:\Users\Mitarbeiter.DESKTOP-EBQCM2F\Documents\GCode\AI35158 - 32 Teile.gcode</fileRecent4>
-  <fileRecent5>C:\Users\Mitarbeiter.DESKTOP-EBQCM2F\Documents\GCode\1001.gcode</fileRecent5>
-  <fileRecent6>C:\Users\Mitarbeiter.DESKTOP-EBQCM2F\Documents\GCode\AI35158 - 10 Teile.gcode</fileRecent6>
-  <fileRecent7>C:\Users\Mitarbeiter.DESKTOP-EBQCM2F\Documents\GCode\AI35158 - Einzelteil.gcode</fileRecent7>
+  <fileRecent5>C:\Users\Mitarbeiter.DESKTOP-EBQCM2F\Documents\GCode\AI32137_i2.gcode</fileRecent5>
+  <fileRecent6>C:\Users\Mitarbeiter.DESKTOP-EBQCM2F\Documents\GCode\AI32137_i2_5Teile.gcode</fileRecent6>
+  <fileRecent7>C:\Users\Mitarbeiter.DESKTOP-EBQCM2F\Documents\GCode\AI32137_i2 nur Gewinde.gcode</fileRecent7>
   <mdiHistory35>(print,|| Spindel starten)</mdiHistory35>
   <mdiHistory36>(print,!|! K&#252;hlung aus...)</mdiHistory36>
   <mdiHistory37>(print,|? K&#252;hlung aus...)</mdiHistory37>
@@ -1137,7 +1137,7 @@
   <ioSer0Timeout>0</ioSer0Timeout>
   <ioSer1Timeout>0</ioSer1Timeout>
   <speedSync>1.00000000000000000000</speedSync>
-  <memused>193</memused>
+  <memused>205</memused>
   <memusedmax>327</memusedmax>
   <uiStateIOLedController>1</uiStateIOLedController>
   <uiStateIOLedOutput>1</uiStateIOLedOutput>
@@ -1246,27 +1246,27 @@
   <ioExt1InInvert>0</ioExt1InInvert>
   <ioExt2InInvert>0</ioExt2InInvert>
   <ioPoKeysSerial>0</ioPoKeysSerial>
-  <fileRecent8>C:\Users\Mitarbeiter.DESKTOP-EBQCM2F\Documents\GCode\AI32245 - 04 (170 x Gewinde).gcode</fileRecent8>
-  <fileRecent9>C:\Users\Mitarbeiter.DESKTOP-EBQCM2F\Documents\GCode\AI32245 - 03 Bohren (170 x Fertigung).gcode</fileRecent9>
-  <fileRecent10>C:\Users\Mitarbeiter.DESKTOP-EBQCM2F\Documents\GCode\AI32245 - 04 (Einrichten 1 x Gewinde).gcode</fileRecent10>
+  <fileRecent8>C:\Users\Mitarbeiter.DESKTOP-EBQCM2F\Documents\GCode\AI32137_i2_Platte_Bohren.gcode</fileRecent8>
+  <fileRecent9>C:\Users\Mitarbeiter.DESKTOP-EBQCM2F\Documents\GCode\AI35158 - 10 Teile.gcode</fileRecent9>
+  <fileRecent10>C:\Users\Mitarbeiter.DESKTOP-EBQCM2F\Documents\GCode\AI35158 - Einzelteil.gcode</fileRecent10>
   <homeSpeedABC>360.00000000000000000000</homeSpeedABC>
   <homeSpeedABCLow>60.00000000000000000000</homeSpeedABCLow>
   <importImage_GenerateMode>0</importImage_GenerateMode>
-  <fileRecent11>C:\Users\Mitarbeiter.DESKTOP-EBQCM2F\Documents\GCode\AI32245 - 02 Bohren (Einrichten).gcode</fileRecent11>
-  <fileRecent12>C:\temp\1001 - Planen.gcode</fileRecent12>
-  <fileRecent13>C:\temp\1005.gcode</fileRecent13>
-  <fileRecent14>C:\temp\1001a.gcode</fileRecent14>
-  <fileRecent15>C:\Program Files\PlanetCNC\Profiles\Default\Scripts\M104.gcode</fileRecent15>
-  <fileRecent16>C:\temp\1001.gcode</fileRecent16>
-  <fileRecent17>C:\temp\1002.gcode</fileRecent17>
-  <fileRecent18>C:\temp\1002-Einzel.gcode</fileRecent18>
-  <fileRecent19>C:\temp\1002-Nur Gewinde.gcode</fileRecent19>
-  <fileRecent20>C:\temp\1002 - Bohren.ngc</fileRecent20>
-  <fileRecent21>C:\temp\1001.tap</fileRecent21>
-  <fileRecent22>C:\temp\1003 - Gewinde.ngc</fileRecent22>
-  <fileRecent23>C:\temp\1002-Nur Gewinde.gcode</fileRecent23>
-  <fileRecent24>C:\temp\1002 - Bohren.ngc</fileRecent24>
-  <fileRecent25>C:\temp\1001.tap</fileRecent25>
+  <fileRecent11>C:\Users\Mitarbeiter.DESKTOP-EBQCM2F\Documents\GCode\AI32245 - 04 (170 x Gewinde).gcode</fileRecent11>
+  <fileRecent12>C:\Users\Mitarbeiter.DESKTOP-EBQCM2F\Documents\GCode\AI32245 - 03 Bohren (170 x Fertigung).gcode</fileRecent12>
+  <fileRecent13>C:\Users\Mitarbeiter.DESKTOP-EBQCM2F\Documents\GCode\AI32245 - 04 (Einrichten 1 x Gewinde).gcode</fileRecent13>
+  <fileRecent14>C:\Users\Mitarbeiter.DESKTOP-EBQCM2F\Documents\GCode\AI32245 - 02 Bohren (Einrichten).gcode</fileRecent14>
+  <fileRecent15>C:\temp\1001 - Planen.gcode</fileRecent15>
+  <fileRecent16>C:\temp\1005.gcode</fileRecent16>
+  <fileRecent17>C:\temp\1001a.gcode</fileRecent17>
+  <fileRecent18>C:\Program Files\PlanetCNC\Profiles\Default\Scripts\M104.gcode</fileRecent18>
+  <fileRecent19>C:\temp\1001.gcode</fileRecent19>
+  <fileRecent20>C:\temp\1002.gcode</fileRecent20>
+  <fileRecent21>C:\temp\1002-Einzel.gcode</fileRecent21>
+  <fileRecent22>C:\temp\1002-Nur Gewinde.gcode</fileRecent22>
+  <fileRecent23>C:\temp\1002 - Bohren.ngc</fileRecent23>
+  <fileRecent24>C:\temp\1001.tap</fileRecent24>
+  <fileRecent25>C:\temp\1003 - Gewinde.ngc</fileRecent25>
   <fileRecent26>C:\temp\1003 - Gewinde.ngc</fileRecent26>
   <debug></debug>
   <displayAxesSystem>0</displayAxesSystem>

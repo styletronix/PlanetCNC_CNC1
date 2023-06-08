@@ -1,9 +1,9 @@
 T0 D0.0 X0.0 Y0.0 Z0.0 A0.0 B0.0 C0.0 U0.0 V0.0 W0.0;leer
-T1 D3.7 X0.0 Y0.0 Z71.40625 A0.0 B0.0 C0.0 U0.0 V0.0 W0.0 typ="Twist Drill" tcx=4.0 tcy=158.9 tcz=154.144;T1
-T2 D4.0 X0.0 Y0.0 Z106.942188 A0.0 B0.0 C0.0 U0.0 V0.0 W0.0 typ="Twist Drill" tcx=4.0 tcy=278.9 tcz=154.144;T2
-T3 D5.6 X0.0 Y0.0 Z75.192187 A0.0 B0.0 C0.0 U0.0 V0.0 W0.0 typ="Twist Drill" tcx=4.0 tcy=398.9 tcz=154.144;T3
-T4 D6.0 X0.0 Y0.0 Z121.573438 A0.0 B0.0 C0.0 U0.0 V0.0 W0.0 typ="Twist Drill" tcx=4.0 tcy=518.9 tcz=154.144;T4
-T5 D7.4 X0.0 Y0.0 Z90.134375 A0.0 B0.0 C0.0 U0.0 V0.0 W0.0 typ="Twist Drill" tcx=4.0 tcy=638.9 tcz=154.144;T5
+T1 D7.0 X0.0 Y0.0 Z89.41875 A0.0 B0.0 C0.0 U0.0 V0.0 W0.0 typ="Twist Drill" tcx=4.0 tcy=158.9 tcz=154.144;T1
+T2 D5.6 X0.0 Y0.0 Z75.3125 A0.0 B0.0 C0.0 U0.0 V0.0 W0.0 typ="Twist Drill" tcx=4.0 tcy=278.9 tcz=154.144;T2
+T3 D10.5 X0.0 Y0.0 Z103.867188 A0.0 B0.0 C0.0 U0.0 V0.0 W0.0 typ="Twist Drill" tcx=4.0 tcy=398.9 tcz=154.144;T3
+T4 D6.0 X0.0 Y0.0 Z121.953125 A0.0 B0.0 C0.0 U0.0 V0.0 W0.0 typ="Twist Drill" tcx=4.0 tcy=518.9 tcz=154.144;T4
+T5 D5.0 X0.0 Y0.0 Z63.684375 A0.0 B0.0 C0.0 U0.0 V0.0 W0.0 typ="Twist Drill" tcx=4.0 tcy=638.9 tcz=154.144;T5
 T6 D8.0 X0.0 Y0.0 Z119.998437 A0.0 B0.0 C0.0 U0.0 V0.0 W0.0 typ="Twist Drill" tcx=4.0 tcy=758.9 tcz=154.144;T6
 T7 D6.0 X0.0 Y0.0 Z0.0 A0.0 B0.0 C0.0 U0.0 V0.0 W0.0 typ="Twist Drill" tcx=4.0 tcy=878.9 tcz=154.144;T7
 T8 D8.0 X0.0 Y0.0 Z0.0 A0.0 B0.0 C0.0 U0.0 V0.0 W0.0 typ="Twist Drill" tcx=4.0 tcy=998.9 tcz=154.144;T8

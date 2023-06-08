@@ -25,26 +25,7 @@
 	if( _sx_debug, print('OnInit Expr') );
 	_sx_canceled = 0;
 	
-	;BEGIN Parameters ATC
-		_sx_tool_loaded_pin = 3;
-		_sx_tool_released_pin = 2;
-		_sx_cover_open_pin = 5;
-		_sx_atc_safex = 60.0;
-		;END
-
-	;BEGIN Parameters Common
-		_sx_niederhalter_pin = 1;
-		_sx_niederhalter_oben_input = 5;
-		_sx_schwenkantrieb_output = 6;
-		_sx_machine_flightheight_z = 255.0;
-		_sx_sim_input_wkz_spannzange = 0;
-		_sx_park_position_x = 5;
-		_sx_park_position_y = 5;
-		_sx_ausblasen_pin_ext1 = 2;
-		_sx_sperrluft_pin_ext1 = 3;
-		;END
-
-	;END
+;END
 
 #OnStart
 	if( _sx_debug, print('OnStart Expr') );

@@ -34,7 +34,7 @@
 			exec(
 				_sx_tool_temperature_current_max = _hw_aux2,
 				_sx_tool_temperature_celcius_current_max = _sx_tool_temperature_current_max / _sx_tool_temperature_celcius_factor
-			)´
+			)
 	);
 	
 	if( EQ(_sx_tool_temperature,0)
