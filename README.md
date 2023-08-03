@@ -11,7 +11,7 @@ Over the years, there where some problems to solve, but now, the machine is work
 
 For more than 2 Years in production environment, I can recommend to use the Planet CNC Controller, Wireless Handwheel and also the TNGv2 Software.
 
-## The most important things I lerned are this:
+# The most important things I had to learn:
 
 1. Use Opto isolators for in and output. Those from Planet CNC or if you prefere a more industrial style, you may use solid state relais like this one:
    https://int.rsdelivers.com/product/rs-pro/rs-pro-solid-state-interface-relay-din-rail-mount/9054277
