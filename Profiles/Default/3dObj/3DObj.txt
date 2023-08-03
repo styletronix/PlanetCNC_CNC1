@@ -17,7 +17,7 @@
 				<Color Value="ffaa0000"/>
 				<Transform X="9" Y="6" Z="0"/>
 			</Part>
-			<Part Name="Demo" Enable="false">
+			<Part Name="Demo" Enable="true">
 				<Mesh Filename="demo.STL"/>
 				<Color Value="ffff5050"/>
 				<Transform X="400" Y="80" Z="30"/>
@@ -145,7 +145,7 @@
 									<Part Name="Niederhalter">
 										<Mesh Filename="Niederhalter.STL"/>
 										<Color Value="ffaa5555"/>
-										<Transform X="0" Y="0" Z="_hw_output_num|_sx_niederhalter_pin * -70"/>
+										<Transform X="0" Y="0" Z="_hw_output_num|_sx_niederhalter_pin * -100"/>
 									</Part>
 									<Part Name="oelschlauch">
 										<Mesh Filename="oelschlauch.stl"/>

@@ -7,8 +7,8 @@
   <serial>65535</serial>
   <controllerCode>CU5Y53GM2C7BAER4NTPA0V8ZWP9E*</controllerCode>
   <computerCode>KUNA17453A4SCNZS18JVAVDR0ARKD</computerCode>
-  <applicatonStart>2023/08/03 16:38:24</applicatonStart>
-  <applicatonEnd>2023/08/03 17:08:25</applicatonEnd>
+  <applicatonStart>2023/08/04 00:31:51</applicatonStart>
+  <applicatonEnd>2023/08/04 00:33:07</applicatonEnd>
   <os>Windows 10 (64 bit)</os>
   <cpu>GenuineIntel (14/20)</cpu>
   <mem>32452</mem>
@@ -18,8 +18,8 @@
   <commRd>0</commRd>
   <commErr>0</commErr>
   <commDpl>0</commDpl>
-  <cnt>694</cnt>
-  <tim>90862</tim>
+  <cnt>695</cnt>
+  <tim>90863</tim>
   <lang>GER.txt</lang>
   <codepage>0</codepage>
   <fileLastOpen>C:\Users\Mitarbeiter.DESKTOP-EBQCM2F\Documents\GCode\AI32137_i2.gcode</fileLastOpen>
@@ -136,10 +136,10 @@
   <displayStateTabScroll28>0</displayStateTabScroll28>
   <displayStateTabScroll29>0</displayStateTabScroll29>
   <displayMidTab>0</displayMidTab>
-  <display3DPanX>11.90395790127887210019</display3DPanX>
-  <display3DPanY>4.33007640166765384038</display3DPanY>
-  <display3DAngleX>-1.61769908169872111969</display3DAngleX>
-  <display3DAngleY>6.66230091830118897889</display3DAngleY>
+  <display3DPanX>68.36123561486012079058</display3DPanX>
+  <display3DPanY>-59.65483834039111599168</display3DPanY>
+  <display3DAngleX>-1.28269908169872715042</display3DAngleX>
+  <display3DAngleY>5.78230091830120773722</display3DAngleY>
   <display3DAngleZ>0.00000000000000000000</display3DAngleZ>
   <display3DFieldOfView>0.01957123154764786599</display3DFieldOfView>
   <displayFollowPosition>1</displayFollowPosition>
@@ -1137,7 +1137,7 @@
   <ioSer0Timeout>0</ioSer0Timeout>
   <ioSer1Timeout>0</ioSer1Timeout>
   <speedSync>1.00000000000000000000</speedSync>
-  <memused>346</memused>
+  <memused>268</memused>
   <memusedmax>346</memusedmax>
   <uiStateIOLedController>1</uiStateIOLedController>
   <uiStateIOLedOutput>1</uiStateIOLedOutput>
