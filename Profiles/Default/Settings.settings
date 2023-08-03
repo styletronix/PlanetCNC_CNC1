@@ -7,8 +7,8 @@
   <serial>65535</serial>
   <controllerCode>CU5Y53GM2C7BAER4NTPA0V8ZWP9E*</controllerCode>
   <computerCode>KUNA17453A4SCNZS18JVAVDR0ARKD</computerCode>
-  <applicatonStart>2023/08/04 00:31:51</applicatonStart>
-  <applicatonEnd>2023/08/04 00:33:07</applicatonEnd>
+  <applicatonStart>2023/08/04 00:43:18</applicatonStart>
+  <applicatonEnd>2023/08/04 00:45:18</applicatonEnd>
   <os>Windows 10 (64 bit)</os>
   <cpu>GenuineIntel (14/20)</cpu>
   <mem>32452</mem>
@@ -18,8 +18,8 @@
   <commRd>0</commRd>
   <commErr>0</commErr>
   <commDpl>0</commDpl>
-  <cnt>695</cnt>
-  <tim>90863</tim>
+  <cnt>698</cnt>
+  <tim>90865</tim>
   <lang>GER.txt</lang>
   <codepage>0</codepage>
   <fileLastOpen>C:\Users\Mitarbeiter.DESKTOP-EBQCM2F\Documents\GCode\AI32137_i2.gcode</fileLastOpen>
@@ -135,13 +135,13 @@
   <displayStateTabScroll27>0</displayStateTabScroll27>
   <displayStateTabScroll28>0</displayStateTabScroll28>
   <displayStateTabScroll29>0</displayStateTabScroll29>
-  <displayMidTab>0</displayMidTab>
-  <display3DPanX>68.36123561486012079058</display3DPanX>
-  <display3DPanY>-59.65483834039111599168</display3DPanY>
-  <display3DAngleX>-1.28269908169872715042</display3DAngleX>
-  <display3DAngleY>5.78230091830120773722</display3DAngleY>
+  <displayMidTab>1</displayMidTab>
+  <display3DPanX>68.20779431952543347961</display3DPanX>
+  <display3DPanY>-56.58418773360907039205</display3DPanY>
+  <display3DAngleX>-1.47769908169872388193</display3DAngleX>
+  <display3DAngleY>5.72730091830120979779</display3DAngleY>
   <display3DAngleZ>0.00000000000000000000</display3DAngleZ>
-  <display3DFieldOfView>0.01957123154764786599</display3DFieldOfView>
+  <display3DFieldOfView>0.02604930918991931951</display3DFieldOfView>
   <displayFollowPosition>1</displayFollowPosition>
   <displayPosition>1</displayPosition>
   <displayGrid>1</displayGrid>
@@ -1063,41 +1063,41 @@
   <exportCSV_Separator>9</exportCSV_Separator>
   <exportCSV_SkipUnusedValue>1</exportCSV_SkipUnusedValue>
   <exportCSV_SkipSameValue>0</exportCSV_SkipSameValue>
-  <mdiHistory0>//Model|278</mdiHistory0>
-  <mdiHistory1>//Viewspace|277</mdiHistory1>
-  <mdiHistory2>//Einstellungen ...|225</mdiHistory2>
-  <mdiHistory3>//Aktualisieren|296</mdiHistory3>
-  <mdiHistory4>//Toolpath History|279</mdiHistory4>
-  <mdiHistory5>G09</mdiHistory5>
-  <mdiHistory6>//Notstopp|352</mdiHistory6>
-  <mdiHistory7>//Position verfolgen|273</mdiHistory7>
-  <mdiHistory8>//Zoom auf Position|271</mdiHistory8>
-  <mdiHistory9>//Herauszoomen|270</mdiHistory9>
-  <mdiHistory10>//Vergr&#246;&#223;ern|269</mdiHistory10>
-  <mdiHistory11>//Perspektivische Ansicht|268</mdiHistory11>
-  <mdiHistory12>//Vorderansicht|267</mdiHistory12>
-  <mdiHistory13>//Seitenansicht|266</mdiHistory13>
-  <mdiHistory14>//Ansicht von oben|265</mdiHistory14>
-  <mdiHistory15>//Zoom auf Teil|272</mdiHistory15>
-  <mdiHistory16>//Zentrum Null|274</mdiHistory16>
-  <mdiHistory17>//Einstellungen ...|225</mdiHistory17>
-  <mdiHistory18>//Nach Updates suchen|1070</mdiHistory18>
-  <mdiHistory19>//&#220;ber ...|1073</mdiHistory19>
-  <mdiHistory20>//Beenden|262</mdiHistory20>
-  <mdiHistory21>//Position verfolgen|273</mdiHistory21>
-  <mdiHistory22>//&#214;ffnen ...|4</mdiHistory22>
-  <mdiHistory23>//Letzte Datei &#246;ffnen|5</mdiHistory23>
-  <mdiHistory24>//Model|278</mdiHistory24>
-  <mdiHistory25>//&#214;ffnen ...|4</mdiHistory25>
-  <mdiHistory26>M105</mdiHistory26>
-  <mdiHistory27>M100 Q0</mdiHistory27>
-  <mdiHistory28>M100 Q1</mdiHistory28>
-  <mdiHistory29>G91 Z1</mdiHistory29>
-  <mdiHistory30>//Letzte Datei &#246;ffnen|5</mdiHistory30>
-  <mdiHistory31>//&#214;ffnen ...|4</mdiHistory31>
-  <mdiHistory32>//Letzte Datei &#246;ffnen|5</mdiHistory32>
-  <mdiHistory33>(EXPR,CMD(Machine.Spindle))</mdiHistory33>
-  <mdiHistory34>(cmd,'Machine.Spindle')</mdiHistory34>
+  <mdiHistory0>//Viewspace|277</mdiHistory0>
+  <mdiHistory1>//Beenden|262</mdiHistory1>
+  <mdiHistory2>//Model|278</mdiHistory2>
+  <mdiHistory3>//Einstellungen ...|225</mdiHistory3>
+  <mdiHistory4>//Aktualisieren|296</mdiHistory4>
+  <mdiHistory5>//Toolpath History|279</mdiHistory5>
+  <mdiHistory6>G09</mdiHistory6>
+  <mdiHistory7>//Notstopp|352</mdiHistory7>
+  <mdiHistory8>//Position verfolgen|273</mdiHistory8>
+  <mdiHistory9>//Zoom auf Position|271</mdiHistory9>
+  <mdiHistory10>//Herauszoomen|270</mdiHistory10>
+  <mdiHistory11>//Vergr&#246;&#223;ern|269</mdiHistory11>
+  <mdiHistory12>//Perspektivische Ansicht|268</mdiHistory12>
+  <mdiHistory13>//Vorderansicht|267</mdiHistory13>
+  <mdiHistory14>//Seitenansicht|266</mdiHistory14>
+  <mdiHistory15>//Ansicht von oben|265</mdiHistory15>
+  <mdiHistory16>//Zoom auf Teil|272</mdiHistory16>
+  <mdiHistory17>//Zentrum Null|274</mdiHistory17>
+  <mdiHistory18>//Einstellungen ...|225</mdiHistory18>
+  <mdiHistory19>//Nach Updates suchen|1070</mdiHistory19>
+  <mdiHistory20>//&#220;ber ...|1073</mdiHistory20>
+  <mdiHistory21>//Beenden|262</mdiHistory21>
+  <mdiHistory22>//Position verfolgen|273</mdiHistory22>
+  <mdiHistory23>//&#214;ffnen ...|4</mdiHistory23>
+  <mdiHistory24>//Letzte Datei &#246;ffnen|5</mdiHistory24>
+  <mdiHistory25>//Model|278</mdiHistory25>
+  <mdiHistory26>//&#214;ffnen ...|4</mdiHistory26>
+  <mdiHistory27>M105</mdiHistory27>
+  <mdiHistory28>M100 Q0</mdiHistory28>
+  <mdiHistory29>M100 Q1</mdiHistory29>
+  <mdiHistory30>G91 Z1</mdiHistory30>
+  <mdiHistory31>//Letzte Datei &#246;ffnen|5</mdiHistory31>
+  <mdiHistory32>//&#214;ffnen ...|4</mdiHistory32>
+  <mdiHistory33>//Letzte Datei &#246;ffnen|5</mdiHistory33>
+  <mdiHistory34>(EXPR,CMD(Machine.Spindle))</mdiHistory34>
   <fileRecent0>C:\temp\1005.gcode</fileRecent0>
   <fileRecent1>C:\temp\1001a.gcode</fileRecent1>
   <fileRecent2>C:\Program Files\PlanetCNC\Profiles\Default\Scripts\M104.gcode</fileRecent2>
@@ -1106,21 +1106,21 @@
   <fileRecent5>C:\temp\1002-Nur Gewinde.gcode</fileRecent5>
   <fileRecent6>C:\temp\1002 - Bohren.ngc</fileRecent6>
   <fileRecent7>C:\temp\1001.tap</fileRecent7>
-  <mdiHistory35>(cmd,Machine.Spindle)</mdiHistory35>
-  <mdiHistory36>=cmdlist()</mdiHistory36>
-  <mdiHistory37>(EXPR,'cmdlist()')</mdiHistory37>
-  <mdiHistory38>(EXPR,cmdlist)</mdiHistory38>
-  <mdiHistory39>(EXPR,'cmdlist')</mdiHistory39>
-  <mdiHistory40>[EXPR[CMDLIST]]</mdiHistory40>
-  <mdiHistory41>[EXPR[CDMLIST]]</mdiHistory41>
-  <mdiHistory42>(print,cmdlist)</mdiHistory42>
-  <mdiHistory43>(cmdlist)</mdiHistory43>
-  <mdiHistory44>//Letzte Datei &#246;ffnen|5</mdiHistory44>
-  <mdiHistory45>(print,|! Spindel starten)</mdiHistory45>
-  <mdiHistory46>(print,| Spindel starten)</mdiHistory46>
-  <mdiHistory47>(print,|? Spindel starten)</mdiHistory47>
-  <mdiHistory48>(print,|b Spindel starten)</mdiHistory48>
-  <mdiHistory49>(print,|| Spindel starten)</mdiHistory49>
+  <mdiHistory35>(cmd,'Machine.Spindle')</mdiHistory35>
+  <mdiHistory36>(cmd,Machine.Spindle)</mdiHistory36>
+  <mdiHistory37>=cmdlist()</mdiHistory37>
+  <mdiHistory38>(EXPR,'cmdlist()')</mdiHistory38>
+  <mdiHistory39>(EXPR,cmdlist)</mdiHistory39>
+  <mdiHistory40>(EXPR,'cmdlist')</mdiHistory40>
+  <mdiHistory41>[EXPR[CMDLIST]]</mdiHistory41>
+  <mdiHistory42>[EXPR[CDMLIST]]</mdiHistory42>
+  <mdiHistory43>(print,cmdlist)</mdiHistory43>
+  <mdiHistory44>(cmdlist)</mdiHistory44>
+  <mdiHistory45>//Letzte Datei &#246;ffnen|5</mdiHistory45>
+  <mdiHistory46>(print,|! Spindel starten)</mdiHistory46>
+  <mdiHistory47>(print,| Spindel starten)</mdiHistory47>
+  <mdiHistory48>(print,|? Spindel starten)</mdiHistory48>
+  <mdiHistory49>(print,|b Spindel starten)</mdiHistory49>
   <uiFontScale>1.10000002384185791016</uiFontScale>
   <ui3DColorAxisX>0xffff0000</ui3DColorAxisX>
   <ui3DColorAxisY>0xff008000</ui3DColorAxisY>
@@ -1137,7 +1137,7 @@
   <ioSer0Timeout>0</ioSer0Timeout>
   <ioSer1Timeout>0</ioSer1Timeout>
   <speedSync>1.00000000000000000000</speedSync>
-  <memused>268</memused>
+  <memused>271</memused>
   <memusedmax>346</memusedmax>
   <uiStateIOLedController>1</uiStateIOLedController>
   <uiStateIOLedOutput>1</uiStateIOLedOutput>
@@ -1270,7 +1270,7 @@
   <fileRecent26>C:\temp\1003 - Gewinde.ngc</fileRecent26>
   <debug></debug>
   <displayAxesSystem>0</displayAxesSystem>
-  <displayViewspace>1</displayViewspace>
+  <displayViewspace>0</displayViewspace>
   <displayModel>1</displayModel>
   <uiMenuVisible>1</uiMenuVisible>
   <uiJogBtnSize>33</uiJogBtnSize>

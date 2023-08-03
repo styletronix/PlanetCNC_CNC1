@@ -1,5 +1,18 @@
 #Loop
-
+	if( NE(_sx_tool_atc_occupied, _sx_3dcache_tool_atc_occupied) ||
+		NE(_current_tool, _sx_3dcache_current_tool) ||
+		NE(_hw_output_num|_sx_schwenkantrieb_output, _sx_3dcache_schwenkantrieb) || 
+		NE(_hw_output_num|_sx_niederhalter_pin, _sx_3dcache_niederhalter), 
+		exec(
+		 	_sx_3dcache_tool_atc_occupied = _sx_tool_atc_occupied,
+			_sx_3dcache_current_tool = _current_tool,
+			_sx_3dcache_schwenkantrieb = _hw_output_num|_sx_schwenkantrieb_output,
+			_sx_3dcache_niederhalter = _hw_output_num|_sx_niederhalter_pin,
+			print('View.Show.Model'),
+			cmd("View.Show.Model"),
+			cmd("View.Show.Model")
+		)
+	);
 	;END
 
 #Loop5
