@@ -14,7 +14,7 @@ For more than 2 Years in production environment, I can recommend to use the Plan
 # The most important things I had to learn:
 
 1. Use Opto isolators for in and output. Those from Planet CNC or if you prefere a more industrial style, you may use solid state relais like this one:
-   https://int.rsdelivers.com/product/rs-pro/rs-pro-solid-state-interface-relay-din-rail-mount/9054277
+   [https://int.rsdelivers.com/product/rs-pro/rs-pro-solid-state-interface-relay-din-rail-mount/9054277](https://de.rs-online.com/web/p/halbleiter-interfacerelais/9054277)
    They can direct connected to the output and input of the Planet CNC Controller.
 
 
