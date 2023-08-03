@@ -5,6 +5,8 @@ o110	;Probing
 ; 2022-02-27	Fixed: Tool offst in wrong direction
 ; 2022-06-06	Startbedingungen prüfen
 ; 2023-02-08	Documentation for Parameters added
+; 2023-08-02  Add Check if Sensor is released.
+;             Add "Forced Overtravel"
 
 ;Required
 ;Q 1=IsProbe 0=Tool length or homing
@@ -17,6 +19,7 @@ o110	;Probing
 ;F measure speed high / default from params
 ;I measure speed low / default from params  / 0=no low speed 
 ;J Offset Messtaster. (verwendet WKZ bibliothek wenn leer)
+;L Erzwungenes überfahren des Endschalters in mm.
 
 
 M999	;Startbedingungen prüfen
@@ -51,6 +54,7 @@ o<chk> endif
 #<speed> = [DEF[#<fvalue>,#<_probe_speed>]]
 #<speedlow> = [DEF[#<ivalue>,#<_probe_speed_low>]]
 #<returnToStart> = [DEF[#<rvalue>,0]]
+#<forcedForwardOverTravel> = [DEF[#<lvalue>,0]]
 
 
 ;BEGIN Check Pre-Condition --------------------------------------------------
@@ -114,18 +118,51 @@ o<chk> endif
 M110 P1 Q#<isProbe>			;Waiting for Probe ready...
 M110 P6 Q#<isProbe>			;Probe stop on unexpected contact
 
+
 ;TODO: Soft Probing ---------------------------  TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
-G38.2 H#<axis> E[#<dir> * #<dist>] F#<speed>
+
+;Checking for already activated input
+o<chkpin> if [#<_probe_pin_1> GT 0]
+  M103 P#<_probe_pin_1> Q0 R1.0 
+o<chkpin> endif
+o<chkpin> if [#<_probe_pin_2> GT 0]
+  M103 P#<_probe_pin_2> Q0 R1.0 
+o<chkpin> endif
+
+
+G38.2 H#<axis> E[#<dir> * #<dist>] F#<speed>  ;Start Measure
 M110 P2 Q#<isProbe>			;Check if result is valid
-G04 P0.08					;Prevent hard direction return
+G04 P0.1					;Prevent hard direction return
+
+;DANGER Forced Overtravel after sensor reached. Only used to force trigger of spring in Sensor contact.
+o<overtravel> if [#<forcedForwardOverTravel> GT 0]
+  (print, Erzwungenes überfahren des Sensors )
+  G01 H#<axis> E[#<dir> * Min[#<forcedForwardOverTravel>, 2]] F#<speed> 
+  G01 H#<axis> E[-#<dir> * Min[#<forcedForwardOverTravel>, 2]] F#<speed> 
+o<overtravel> endif
 
 o<low> if[#<speedlow> GT 0]
 	;G38.5  TODO: Reverse measurement --------  TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
 	G01 H#<axis> E[-#<dir> * Min[#<back>, Abs[#<_work_axis|#<axis>> - #<start>] ]] F#<speed> 
 
+;Checking for already activated input
+o<chkpin> if [#<_probe_pin_1> GT 0]
+  M103 P#<_probe_pin_1> Q0 R2.0 
+o<chkpin> endif
+o<chkpin> if [#<_probe_pin_2> GT 0]
+  M103 P#<_probe_pin_2> Q0 R2.0 
+o<chkpin> endif
+
 	G38.2 H#<axis> E[#<dir> * #<dist>] F#<speedlow>
 	M110 P2 Q#<isProbe>		;Check if result is valid
-	G04 P0.08 				;Prevent hard direction return by adding delay
+	G04 P0.1 				;Prevent hard direction return by adding delay
+
+  ;DANGER Forced Overtravel after sensor reached. Only used to force trigger of spring in Sensor contact.
+o<overtravel> if [#<forcedForwardOverTravel> GT 0]
+  (print, Erzwungenes überfahren des Sensors )
+  G01 H#<axis> E[#<dir> * Min[#<forcedForwardOverTravel>, 2]] F#<speed> 
+  G01 H#<axis> E[-#<dir> * Min[#<forcedForwardOverTravel>, 2]] F#<speed> 
+o<overtravel> endif
 o<low> endif
 
 M110 P7 Q#<isProbe>			;Disable probe monitoring

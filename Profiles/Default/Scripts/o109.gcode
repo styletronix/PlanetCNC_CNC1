@@ -1,10 +1,22 @@
 o109 ;Probe Check
+
+; 2023-08-02 Prüft ob WKZ Längensensor bereits gedrückt ist oder Endschalter aktiv.
+
+
 #<_return> = NAN[]
 #<isProbe> = [DEF[#<qvalue>,1]]
 
 o<chk> if[LNOT[ACTIVE[]]]
 	M99
 o<chk> endif
+
+;Check if limit switch is active.
+G09
+o<cklimit> if [#<_hw_limit> NE 0]
+	(msg,Ein Endschalter ist aktiv. Messung nicht möglich.)
+	#<_sx_canceled> = 1
+	M2
+o<cklimit> endif
 
 o<qmode> if [#<isProbe>]  ;Is Probe
 	o<chk> if [[#<_probe_use_tooltable> GT 0] AND [#<_tool_isprobe_num|#<_current_tool>>] EQ 0]
@@ -37,6 +49,9 @@ o<qmode> else                 ;Werkzeuglänge
 		#<_sx_canceled> = 1
 		M2
 	O<chkToolExists> endif
+
+	; Check if Sensor is already triggered
+	M103 P#<_probe_pin_1> Q0 R2.0 
 o<qmode> endif
 
 #<_return> = 1

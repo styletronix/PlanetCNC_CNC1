@@ -1,3 +1,4 @@
+File.Settings_...=0/"S"
 View.Top_View=65648
 View.Side_View=65649
 View.Front_View=65650
@@ -8,6 +9,7 @@ View.Zoom_Position=65654
 View.Zoom_Part=65655
 View.Follow_Position=65656
 View.Center_Zero=65657
+View.Show.Model=65
 Program.Lines.Next=65571
 Program.Lines.Next_Page=65570
 Program.Lines.Previous=65572

@@ -62,6 +62,7 @@ o<loopy> while [1]
     G65 P110 H2 E-1
     o<chk> if[NOTEXISTS[#<_return>] OR [#<_measure> EQ 0]]
       (msg,Measure error)
+      #<_sx_canceled> = 1
       M2
     o<chk> endif
 

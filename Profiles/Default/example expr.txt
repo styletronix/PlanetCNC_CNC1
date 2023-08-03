@@ -1,0 +1,132 @@
+;BEGIN Loop
+#Loop
+	;BEGIN E-Stop
+	;; Monitor external error signals which requires E-Stop
+	;; Error X Y Z
+	if( EQ(_sx_hasError,0) 
+		&& EQ(_hw_sim,0) 
+		&& NE(_hw_input_num|8,1), 
+			exec(
+				_sx_hasError = 1, 
+				cmd('Machine.Emergency_Stop'), 
+				msg('Error 1')
+			)
+	);
+	
+	if( EQ(_sx_hasError,0) 
+		&& EQ(_hw_sim,0) 
+		&& NE(_hw_input_num|7,1), 
+			exec(
+				_sx_hasError = 1, 
+				cmd('Machine.Emergency_Stop'), 
+				msg('Error 2')
+			)
+	);
+	
+;END
+
+	;BEGIN Monitor tool removal
+	if( EQ(_sx_tool_autoremove,1) 
+		&& GT(_sx_tool_loaded_pin,0) 
+		&& EQ(_hw_sim,0)
+		&& EQ(_hw_stop,1)
+		&& EQ(_sx_tool_removed,0)
+		&& EQ(_hw_input_num|_sx_tool_loaded_pin,0),
+			exec(
+				_sx_tool_removed = 1,
+				print('Werkzeug entfernt'),
+				_sx_tool_measureRequired = 1,				
+				_sx_tool_removed_num = _current_tool,
+				_current_tool = 0
+			)
+	);
+;END
+
+;END
+
+
+;BEGIN Loop5
+#Loop5
+
+;END
+
+
+;BEGIN Loop15
+#Loop15
+
+
+;END
+
+
+;BEGIN Loop60
+#Loop60
+
+
+;END
+
+
+;BEGIN Loop300
+#Loop300
+
+
+;END
+
+
+;BEGIN OnInit
+#OnInit
+
+;END
+
+
+;BEGIN OnStart
+#OnStart
+
+;END
+
+
+;BEGIN OnPause
+#OnPause
+
+;END
+
+
+;BEGIN OnStop
+#OnStop
+
+;END
+
+
+;BEGIN OnEStop
+#OnEStop
+
+;END
+
+
+;BEGIN OnEnd
+#OnEnd
+
+;END
+
+
+;BEGIN OnJog
+#OnJog
+
+;END
+
+
+;BEGIN OnWheel
+#OnWheel
+
+;END
+
+
+;BEGIN OnCmd
+#OnCmd
+
+;END
+
+
+;BEGIN OnShutdown
+#OnShutdown
+
+;END

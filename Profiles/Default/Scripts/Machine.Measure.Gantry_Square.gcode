@@ -17,6 +17,7 @@ M11P1
 o<loop> while [#<cnt> LE 8]
   o<chk> if [[#<_motoroutputorder_axis|#<cnt>> EQ 6] OR [#<_motoroutputorder_axis|#<cnt>> EQ 7]]
     (msg,Can not perform script if U or V axis is assigned to output)
+    #<_sx_canceled> = 1
     M2
   o<chk> endif
   #<cnt> = [#<cnt> + 1]
@@ -25,6 +26,7 @@ o<loop> endwhile
 ;check axis
 o<chkaxis> if [#<_gantrysquare_axis> LT 0]
   (msg,Square axis is not set)
+  #<_sx_canceled> = 1
   M2
 o<chkaxis> endif
 
@@ -34,10 +36,12 @@ o<chkaxis> endif
 o<chkdir> if [#<_gantrysquare_dir> EQ +1]
   o<chkpin> if [#<_limitpin_up> LE 0]
     (msg,Limit pin U+ is not set)
+    #<_sx_canceled> = 1
     M2
   o<chkpin> endif
   o<chkpin> if [#<_limitpin_vp> LE 0]
     (msg,Limit pin V+ is not set)
+    #<_sx_canceled> = 1
     M2
   o<chkpin> endif
   #<pinu> = #<_limitpin_up>
@@ -45,16 +49,19 @@ o<chkdir> if [#<_gantrysquare_dir> EQ +1]
 o<chkdir> elseif [#<_gantrysquare_dir> EQ -1]
   o<chkpin> if [#<_limitpin_un> LE 0]
     (msg,Limit pin U- is not set)
+    #<_sx_canceled> = 1
     M2
   o<chkpin> endif
   o<chkpin> if [#<_limitpin_vn> LE 0]
     (msg,Limit pin V- is not set)
+    #<_sx_canceled> = 1
     M2
   o<chkpin> endif
   #<pinu> = #<_limitpin_un>
   #<pinv> = #<_limitpin_vn>
 o<chkdir> else
   (msg,Square direction is not set)
+  #<_sx_canceled> = 1
   M2
 o<chkdir> endif
 

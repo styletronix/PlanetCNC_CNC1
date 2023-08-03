@@ -4,6 +4,33 @@
 #<isProbe> = [DEF[#<qvalue>, 1]]
 #<stopOnFailure> = [DEF[#<rvalue>,1]]
 
+
+o<isProbe> if [#<isProbe> EQ 0]	;WKZ Sensor
+	o<mode> if [#<pvalue> EQ 2]	; Check Result
+		o<chk> if [#<_hw_input_num|#<_probe_pin_1>> NE 1]
+			o<msgorresult> if [#<stopOnFailure> EQ 1]
+				(dlgname,Störung)
+				(dlg,Messung ungültig. Sensor ist nicht betätigt, typ=label, x=0, w=410, color=0xffffff)
+				(dlg,./Icons/Warning.png, typ=image, x=0)
+				(dlgshow)
+
+				#<_sx_canceled> = 1
+				M2
+			o<msgorresult> else
+				(print, Störung. Messung ungültig. Sensor ist nicht betätigt)
+				#<_return> = NAN[]
+				M99
+			o<msgorresult> endif
+		o<chk> endif
+	o<mode> endif
+
+	(print, Messung OK)
+	#<_return> = 1
+	M99
+o<isProbe> endif
+
+
+
 ;Skip if it is not a Probing function
 o<isProbe> if [#<isProbe> NE 1]
 	#<_return> = 1

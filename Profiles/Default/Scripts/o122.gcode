@@ -75,7 +75,7 @@ O<isSimulation> if [[#<_hw_sim> EQ 1] and [#<toolmeasure> EQ 3]]
 	
 O<isSimulation> else
 	(print, WKZ Länge messen)
-	G65 P110 H2 E-1 Q0 R1 D#<probeDist> K#<_tooloff_swdist> J[#<_tooloff_sensorz> + #<soz>] F#<_tooloff_speed> I#<_tooloff_speed_low>
+	G65 P110 H2 E-1 Q0 R1 D#<probeDist> K#<_tooloff_swdist> J[#<_tooloff_sensorz> + #<soz>] F#<_tooloff_speed> I#<_tooloff_speed_low> L1
 
 O<isSimulation> endif
 

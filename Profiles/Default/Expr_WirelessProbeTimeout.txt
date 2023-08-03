@@ -54,7 +54,7 @@
 
 
 #OnJog
-	if( EQ(_tool_isprobe_num|_current_tool,1),
+	if( EQ(_tool_isprobe_num|_current_tool, 1),
 		_sx_wireless_probe_lastused = DATETIME()
 	);
 	;END
@@ -64,4 +64,38 @@
 	if( EQ(_tool_isprobe_num|_current_tool,1),
 		_sx_wireless_probe_lastused = DATETIME()
 	);
+
+	;Stop on Probe contact if Jogging in Mode 1,2,3 for axis x,y,z
+	if (
+		GE(_hw_mpg_axis, 1) && 
+		LE(_hw_mpg_axis, 3) &&
+		GE(_hw_mpg_mode, 1) &&
+		LE(_hw_mpg_mode, 3) && 
+		EQ(_hw_isjog ,1)  &&
+		EQ(_tool_isprobe_num|_current_tool, 1) &&
+		EQ(_sx_wireless_probe_laststate, 1) &&
+		NE(_probe_pin_2, _sx_wireless_probe_in), 
+			exec(
+				_probe_pin_2 = _sx_wireless_probe_in,
+				print("STOP bei Kontakt mit Wireless-Sonde aktiv")
+			)
+	);
+
+	;Do Not stop on Probe if Jogging on different Mode than 1,2,3 and other axis than x,y,z
+	;Stopping unexpectedly in Mode > 3 is a very hard stop and no one will ever probe at that speed. (I hope so) 
+	if (
+		(LT(_hw_mpg_axis, 1) || 
+		GT(_hw_mpg_axis, 3) ||
+		LT(_hw_mpg_mode, 1) || 
+		NE(_sx_wireless_probe_laststate, 1) ||
+		GT(_hw_mpg_mode, 3)) &&
+		EQ(_hw_isjog , 1) &&
+		EQ(_tool_isprobe_num|_current_tool, 1) &&
+		NE(_probe_pin_2, 0), 
+			exec(
+				_probe_pin_2 = 0,
+				print("KEIN STOP bei Kontakt mit Wireless-Sonde")
+			)
+	);
+
 	;END

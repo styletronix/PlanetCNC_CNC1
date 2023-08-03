@@ -39,6 +39,7 @@ o<st> elseif [#<orient> EQ 2]
   #<axis> = 1
 o<st> else
   (msg,Error)
+  #<_sx_canceled> = 1
   M2
 o<st> endif
 

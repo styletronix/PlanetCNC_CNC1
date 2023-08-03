@@ -5,7 +5,7 @@ cmd: "File.Open_..." "" image="Icons/IMG_FileOpen.svg" imagechange="true"
 cmd: "Machine.Start" "" image="Icons/IMG_Start.svg" imagechange="true" color=#00aa00 
 cmd: "Machine.Stop" "" image="Icons/IMG_Stop.svg" imagechange="true" color=#8888ff 
 cmd: "Machine.Pause" "" image="Icons/IMG_Pause.svg" imagechange="true" color=#ffff88 
-cmd: "Machine.Override.Pause_Optional" "" image="Icons/Pause_Optional.svg" imagechange="true" color=#ffff88
+cmd: "Machine.Override.Pause_Optional" "" image="Icons/Pause_Optional.svg" imagechange="true" color=#ffff88 updatefast="true"
 expr: "_pause_optional = _pause_optional == 0 " "" image="Icons/Pause_Optional.svg" imagechange="true" color=#ffff88 updown="_pause_optional == 1" updatefast="true"
 ---
 cmd: "View.Top_View" "" image="Icons/IMG_ViewTop.svg" imagechange="true"
@@ -27,7 +27,7 @@ expr: "out(_sx_niederhalter_pin - 1,_hw_output_num|_sx_niederhalter_pin == 0)" "
 expr: "out(_sx_schwenkantrieb_output - 1, _hw_output_num|_sx_schwenkantrieb_output == 0)" "" enable="_hw_estop == 0" image="Icons/Flood_schwenk.svg" updown="_hw_output_num|_sx_schwenkantrieb_output == 1" tooltip="Schwenkantrieb für Öl Ein/Aus" imagechange="true" updatefast="true"
 expr: "extout1(_sx_wireless_probe_on_extout1 -1, _extout1_num|_sx_wireless_probe_on_extout1 == 0)" "" enable="_hw_estop == 0" updown="_extout1_num|_sx_wireless_probe_on_extout1 == 1" image="Icons/Probe_wireless.svg" updatefast="true"
 expr: "extout1(_sx_ausblasen_pin_ext1 -1, _extout1_num|_sx_ausblasen_pin_ext1 == 0)" "Clean" enable="_hw_estop == 0" updown="_extout1_num|_sx_ausblasen_pin_ext1 == 1" updatefast="true" imagechange="true"
-expr: "startcode('M110 P8')" "" enable="_hw_estop == 0" updown="_probe_pin_2 == _sx_wireless_probe_in && _hw_limits_en == 1" image="Icons/Probe_stop.svg"
+expr: "startcode('M110 P8')" "" enable="_hw_estop == 0" updown="_probe_pin_2 == _sx_wireless_probe_in && (_hw_limits_en == 1 || _hw_sim == 1)" image="Icons/Probe_stop.svg"
 ***
 cmd: "Machine.Limits.Soft_Limits_Enable" "Soft- Limit"
 cmd: "Machine.Limits.Hard_Limits_Enable" "Hard- Limit"

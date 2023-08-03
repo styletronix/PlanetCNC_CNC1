@@ -1,0 +1,16 @@
+name "Outputs"
+io output
+---
+label "Output" colorname=#ffa500
+param _output 0 "Output"
+---
+label "Spindle" colorname=#ffa500
+param _spindle 0 "Spindle"
+param _spindle_on 0 "Spindle On"
+param _spindle_cw 0 "Spindle CW"
+param _spindle_ccw 0 "Spindle CCW"
+---
+label "Coolant" colorname=#ffa500
+param _mist 0 "Mist"
+param _mist_on 0 "Mist On"
+param _flood 0 "Flood"

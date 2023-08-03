@@ -1,0 +1,9 @@
+name "Werkzeug"
+io custom colorname=#ffa500 name="Temperaturüberwachung" led="_sx_led_toolTemp|-1|"
+param _hw_aux2 0 "Temperatur"  param _sx_tool_temperature_current_max 0 "Aktuelles maximum"
+param _sx_tool_temperature_max 0 "Pause ab"
+param _sx_tool_temperature_critical 0 "Not-Stop ab"
+---
+param _sx_tool_atc_occupied 0 "ATC Belegung"
+param _sx_tool_measureRequired B "WKZ Messung erforderlich"
+param _tooloff_z 2 "WKZ Offset Z"

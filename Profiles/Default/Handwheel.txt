@@ -39,8 +39,20 @@ expr: "_extout1_num|_sx_wireless_probe_on_extout1 = _extout1_num|_sx_wireless_pr
 expr: "startcode('M110 P8')" "Stop bei Sonde" num=0x10106
 
 expr: "startcode('M112 P#<_hw_mpg_custom>')" "Werkzeug T" num=0x10201 param="0|1|0|10"
-expr: "startcode('G59 P#<_hw_mpg_custom>')" "KoordSys C" num=0x10202 param="1|1|1|999"
-expr: "_sx_multiCS_enabled = XOR(_sx_multiCS_enabled,EXP2(_hw_mpg_custom - 1))" "AutoStart C" num=0x10204 param="1|1|1|9"
+expr: "startcode('M112 P0')" "WKZ T0 ablegen T0" num=0x10202
+expr: "startcode('M112 P1)" "WKZ T1" num=0x10203
+expr: "startcode('M112 P2')" "WKZ T2" num=0x10204
+expr: "startcode('M112 P3')" "WKZ T3" num=0x10205
+expr: "startcode('M112 P4')" "WKZ T4" num=0x10206
+expr: "startcode('M112 P5')" "WKZ T5" num=0x10207
+expr: "startcode('M112 P6')" "WKZ T6" num=0x10208
+expr: "startcode('M112 P7')" "WKZ T7" num=0x10209
+expr: "startcode('M112 P8')" "WKZ T8" num=0x10210
+expr: "startcode('M112 P9')" "WKZ T9 Taster" num=0x10211
+expr: "startcode('M112 P10')" "WKZ T10" num=0x1012
+
+expr: "startcode('G59 P#<_hw_mpg_custom>')" "KoordSys C" num=0x10220 param="1|1|1|999"
+expr: "_sx_multiCS_enabled = XOR(_sx_multiCS_enabled,EXP2(_hw_mpg_custom - 1))" "AutoStart C" num=0x10201 param="1|1|1|9"
 
 expr: "_sx_tool_temperature_max = _hw_mpg_custom * _sx_tool_temperature_celcius_factor" "Temp Pause" num=0x10301 param="40|1|20|130"
 expr: "_sx_tool_temperature_critical = _hw_mpg_custom * _sx_tool_temperature_celcius_factor" "Temp EStop" num=0x10302 param="40|1|20|130"
@@ -48,4 +60,4 @@ expr: "_sx_tool_temperature_critical = _hw_mpg_custom * _sx_tool_temperature_cel
 expr: "startcode('G65 P297 Q1')" "M1 Nut rechts" num=0x10401
 expr: "startcode('G65 P297 Q2')" "M2 Nut links" num=0x10402
 expr: "startcode('G65 P297 Q3')" "M3 Kante links" num=0x10403
-expr: "startcode('G65 P297 Q4')" "M3 Tiefe" num=0x10404
+expr: "startcode('G65 P297 Q4')" "M4 Tiefe" num=0x10404

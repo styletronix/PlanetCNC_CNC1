@@ -45,6 +45,7 @@ o<st> elseif [#<corner> EQ 4]
   #<dir> = +1
 o<st> else
   (msg,Error)
+  #<_sx_canceled> = 1
   M2
 o<st> endif
 

@@ -1,0 +1,115 @@
+G-Code
+(print,Normal)			;Normal
+(print,|bBold)			;Fett
+(print,|!Green)			;Grün
+(print,|!|bGreen Bold)	;Grün und Fett
+
+
+cmd: "Machine.Output_On" image="BtnBottom/output.svg" imagechange="true" stroke=1.1 name="ON" size=60 typ=menu val="0@Output 1|1@Output 2|2@Output 3"
+cmd: "File.Open_File" image="BtnBottom/features-list.svg" imagechange="true" stroke=1.1 size=50 typ=menu val="str:BtnBottom/Mickey.nc@Mickey|str:BtnBottom/Butterfly.nc@Butterfly|str:BtnBottom/Arcs.nc@Arcs|str:BtnBottom/Square.nc@Square"
+cmd: "Machine.Output_PWM" image="BtnBottom/laser-beam.svg" imagechange="true" stroke=1.1 typ=menu val="[0;0]@PWM1 0%|[0;25]@PWM1 25%|[0;75]@PWM1 75%|[0;100]@PWM1 100%"
+
+
+
+Expr.txt
+#OnWheel
+
+
+Handwheels.txt
+cmd: "NONE" "" num=0x000b		(unassigning spindle key)
+
+4. Rotating wheel in "C" Mode allows macro selection. Here is an example:
+Code:
+cmd: "NONE" "Count by 5" num=0x10006 param=5
+cmd: "Machine.Output_PWM" "PWM" num=0x10005 param=10 val="[0;expr:_hw_mpg_custom]"
+
+
+Macros are defined with "num" attribute greater than 0x10000. They are also sorted by this number.
+"param" attribute defines scaling factor for "_hw_mpg_custom" parameter.
+Macros are executed by pressing "Cycle" button.
+
+
+Here are examples for new handwheel features:
+
+Code:
+cmd: "Machine.Output_PWM" "PWM" num=0x10005 param=0|10|0|100 val="[0;expr:_hw_mpg_custom]"
+"param" excepsts 4 numbers separated with pipe (|) character.
+1. initial value
+2. step
+3. minimum
+4. maximum
+
+Number of decimals is automatically calculated from step value. Or you can set is manually with "size".
+Example:
+Code:
+param=10|0.1 size=3
+Initial value 10, step 0.1, number of decimals shown 3. no minimum or maximum.
+
+Code:
+expr: "exec('#Pipi')" "Pipi" num=0x10010 param=0|5|-20|20
+This will execute expr.txt section named "#Pipi"
+
+
+
+
+Meldung mit OK button
+(dlgname,Fehler, opt=1)
+(dlg,Fehlerhafter P-Wert bei M110, typ=label, x=0, w=410, color=0xffffff)
+(dlg,./Icons/Warning.png, typ=image, x=0)
+(dlgshow)
+
+Meldung mit OK und Abbrechen button
+(dlgname,Fehler)
+(dlg,Fehlerhafter P-Wert bei M110, typ=label, x=0, w=410, color=0xffffff)
+(dlg,./Icons/Warning.png, typ=image, x=0)
+(dlgshow)
+	
+Text:			(dlg,Pause fortsetzen, typ=label, x=0, w=410, color=0xffffff)	
+Eingabefeld:	(dlg,Bezeichnung, dec=3, def=-20, min=-1000, max=1000, param=length)	
+				(dlg,Distance, x=0, dec=2, def='setunit(10, 0.5);', min=0.1, max=10000, setunits, store, param=dist)
+Bild:			(dlg,./Icons/Warning.png, typ=image, x=0)	
+Auswahl:		(dlg,|Ja|Nein, typ=checkbox, x=50, w=600, def=1, store, param=option)
+				(dlg,checkbox, typ=checkbox, x=50, w=600, def=1, store, param=option)
+				(dlg,|Nut rechts|Nut links|linke Kante, typ=checkbox, x=10, w=150, def=0, store, param=mode)
+\Zeilenumruch:	(dlg,Action|Nothing|Move|\Set WO|Set CS, typ=checkbox, x=20, w=90, def=1, store, param=action)
+
+(dlgshow)
+
+	
+	
+	
+	
+Installation Pyhon embedded:
+
+Downlod python
+PS> Invoke-WebRequest -Uri https://www.python.org/ftp/python/3.11.1/python-3.11.1-embed-amd64.zip -OutFile python-3.11.1-embed-amd64.zip
+Expand-Archive .\python-3.11.1-embed-amd64.zip
+cd .\python-3.11.1-embed-amd64
+
+Open the python3xx._pth file corresponding to your version (e.g. python311._pth for Python 3.11), and make sure the following import line is uncommented. This will automatically add site directories used by pip to the Python path:
+# Uncomment to run site.main() automatically
+import site
+
+Download pip
+Invoke-WebRequest -Uri https://bootstrap.pypa.io/get-pip.py -OutFile get-pip.py
+.\python.exe get-pip.py
+
+.\Scripts\pip.exe list
+.\Scripts\pip.exe install requests
+
+	
+
+Output: SN74AHCT244
+https://www.ti.com/lit/ds/symlink/sn74ahct244.pdf?ts=1646810373048&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FSN74AHCT244%253Futm_source%253Dgoogle%2526utm_medium%253Dcpc%2526utm_campaign%253Dasc-null-null-GPN_EN-cpc-pf-google-eu%2526utm_content%253DSN74AHCT244%2526ds_k%253DSN74AHCT244%2526DCM%253Dyes%2526gclid%253DCj0KCQiAmpyRBhC-ARIsABs2EAo1VPUnjF-9SR8UVF44gCl_uaG-Xmsop7m5Bh1djREUxlqL1zA78kUaAsv7EALw_wcB%2526gclsrc%253Daw.ds
+P: 	0V / 5V	 	To GND	TTL
+N:	-5V / 0V 	To +5V 	TTL
+Recommended 8mA
+Absolute max 20mA
+
+
+Input: SN74AHC244
+https://www.ti.com/lit/ds/symlink/sn74ahc244.pdf?ts=1646811796005&ref_url=https%253A%252F%252Fwww.ti.com%252Fsitesearch%252Fen-us%252Fdocs%252Funiversalsearch.tsp%253FlangPref%253Den-US%2526searchTerm%253DSN74AHC244%2526nr%253D55
+0 - 5.5 V
+high 2.1 V (3.85)
+low 0.9 V
++- 2 µA
