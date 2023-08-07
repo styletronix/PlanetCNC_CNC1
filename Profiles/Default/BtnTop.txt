@@ -21,7 +21,7 @@ cmd: "View.Zoom_Part" "" image="Icons/IMG_ZoomPart.svg" imagechange="true"
 cmd: "Machine.Mist" "" image="Icons/IMG_Mist.svg" imagechange="true"
 cmd: "Machine.Flood" "" image="Icons/IMG_Flood.svg" imagechange="true"
 ;cmd: "Machine.Spindle" "" image="Icons/IMG_Spindle.svg" imagechange="true"
-expr: "startcode('M300 Q0')" image="Icons/IMG_Spindle.svg" imagechange="true" updatefast="true"
+expr: "startcode('M300 Q0')" image="Icons/IMG_Spindle.svg" enable="_hw_estop == 0 && _hw_idle == 1" updown="_spindle_on" imagechange="true" updatefast="true"
 ---
 expr: "out(_sx_niederhalter_pin - 1,_hw_output_num|_sx_niederhalter_pin == 0)" "" enable="_hw_estop == 0" updown="_hw_output_num|_sx_niederhalter_pin == 1" tooltip="Niederhalter Ein/Aus" image="Icons/clamp2.svg" updatefast="true"
 expr: "out(_sx_schwenkantrieb_output - 1, _hw_output_num|_sx_schwenkantrieb_output == 0)" "" enable="_hw_estop == 0" image="Icons/Flood_schwenk.svg" updown="_hw_output_num|_sx_schwenkantrieb_output == 1" tooltip="Schwenkantrieb für Öl Ein/Aus" imagechange="true" updatefast="true"

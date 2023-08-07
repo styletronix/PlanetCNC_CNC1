@@ -6,9 +6,9 @@
   <firmware>20230504</firmware>
   <serial>65535</serial>
   <controllerCode>CU5Y53GM2C7BAER4NTPA0V8ZWP9E*</controllerCode>
-  <computerCode>KUNA17453A4SCNZS18JVAVDR0ARKD</computerCode>
-  <applicatonStart>2023/08/04 00:43:18</applicatonStart>
-  <applicatonEnd>2023/08/04 00:45:18</applicatonEnd>
+  <computerCode>KUKHHRH6XRY292E2FPKXR3RKDVKMJ</computerCode>
+  <applicatonStart>2023/08/05 15:21:57</applicatonStart>
+  <applicatonEnd>2023/08/05 15:22:45</applicatonEnd>
   <os>Windows 10 (64 bit)</os>
   <cpu>GenuineIntel (14/20)</cpu>
   <mem>32452</mem>
@@ -18,8 +18,8 @@
   <commRd>0</commRd>
   <commErr>0</commErr>
   <commDpl>0</commDpl>
-  <cnt>698</cnt>
-  <tim>90865</tim>
+  <cnt>701</cnt>
+  <tim>91002</tim>
   <lang>GER.txt</lang>
   <codepage>0</codepage>
   <fileLastOpen>C:\Users\Mitarbeiter.DESKTOP-EBQCM2F\Documents\GCode\AI32137_i2.gcode</fileLastOpen>
@@ -136,10 +136,10 @@
   <displayStateTabScroll28>0</displayStateTabScroll28>
   <displayStateTabScroll29>0</displayStateTabScroll29>
   <displayMidTab>1</displayMidTab>
-  <display3DPanX>68.20779431952543347961</display3DPanX>
-  <display3DPanY>-56.58418773360907039205</display3DPanY>
-  <display3DAngleX>-1.47769908169872388193</display3DAngleX>
-  <display3DAngleY>5.72730091830120979779</display3DAngleY>
+  <display3DPanX>197.20926439059400081533</display3DPanX>
+  <display3DPanY>-11.49629528158491353906</display3DPanY>
+  <display3DAngleX>-1.27269908169872847381</display3DAngleX>
+  <display3DAngleY>5.78230091830120862539</display3DAngleY>
   <display3DAngleZ>0.00000000000000000000</display3DAngleZ>
   <display3DFieldOfView>0.02604930918991931951</display3DFieldOfView>
   <displayFollowPosition>1</displayFollowPosition>
@@ -163,7 +163,7 @@
   <singleStepEnabled>0</singleStepEnabled>
   <pauseOptionalEnabled>0</pauseOptionalEnabled>
   <softLimitsIgnore>0</softLimitsIgnore>
-  <settingsPageNumber>13</settingsPageNumber>
+  <settingsPageNumber>2</settingsPageNumber>
   <description>CNC 1</description>
   <units>0</units>
   <notes></notes>
@@ -179,10 +179,10 @@
   <connectionPrimaryPort>0</connectionPrimaryPort>
   <connectionPrimaryIdent></connectionPrimaryIdent>
   <connectionSafemode>1</connectionSafemode>
-  <uiColorMain>0xff646464</uiColorMain>
-  <uiColorBack>0xff3c3c3c</uiColorBack>
-  <uiColorText>0xffffffff</uiColorText>
-  <uiColorOutline>0xffd4d4d4</uiColorOutline>
+  <uiColorMain>0xff393939</uiColorMain>
+  <uiColorBack>0xff242424</uiColorBack>
+  <uiColorText>0xffeeeeee</uiColorText>
+  <uiColorOutline>0xff727272</uiColorOutline>
   <uiColorSkin></uiColorSkin>
   <uiGap>2</uiGap>
   <uiGap2>2</uiGap2>
@@ -200,12 +200,12 @@
   <uiAutoRedraw>0</uiAutoRedraw>
   <uiAutoRedraw1>1</uiAutoRedraw1>
   <uiAutoRedraw2>1</uiAutoRedraw2>
-  <uiMenuColorTitleBack>0x0</uiMenuColorTitleBack>
+  <uiMenuColorTitleBack>0x7a1e53ff</uiMenuColorTitleBack>
   <uiMenuColorTitleText>0xffffffff</uiMenuColorTitleText>
   <uiMenuColorBack>0xff000000</uiMenuColorBack>
   <uiMenuColorText>0xffffffff</uiMenuColorText>
-  <uiMenuSize>20</uiMenuSize>
-  <uiMenuDlgSize>16</uiMenuDlgSize>
+  <uiMenuSize>25</uiMenuSize>
+  <uiMenuDlgSize>21</uiMenuDlgSize>
   <uiToolbarColorBack>0xff000000</uiToolbarColorBack>
   <uiToolbarColorBtn>0xffffffff</uiToolbarColorBtn>
   <uiToolbarColorBtnActive>0xff00ff00</uiToolbarColorBtnActive>
@@ -269,7 +269,7 @@
   <uiLEDColorDarkGreen>0xff006400</uiLEDColorDarkGreen>
   <uiLEDColorOrange>0xffff4500</uiLEDColorOrange>
   <uiLEDColorBlue>0xff1e90ff</uiLEDColorBlue>
-  <uiStatusSize>30</uiStatusSize>
+  <uiStatusSize>20</uiStatusSize>
   <uiStateStatusLEDs>SL,LM,A</uiStateStatusLEDs>
   <uiJogColorBack>0xffbf0000</uiJogColorBack>
   <uiJogColorValue>0xffe0d6cc</uiJogColorValue>
@@ -377,7 +377,7 @@
   <uiGCodeColorScript>0xfff0b7cc</uiGCodeColorScript>
   <uiGCodeColorOther>0xff93825e</uiGCodeColorOther>
   <uiGCodeColorError>0xffff0000</uiGCodeColorError>
-  <uiGCodeTextSize>30</uiGCodeTextSize>
+  <uiGCodeTextSize>20</uiGCodeTextSize>
   <uiGCodeMDIColorBack>0x0</uiGCodeMDIColorBack>
   <uiGCodeMDIColorFocus>0xff3f5458</uiGCodeMDIColorFocus>
   <uiGCodeMDIColorText>0xffffffff</uiGCodeMDIColorText>
@@ -1063,10 +1063,10 @@
   <exportCSV_Separator>9</exportCSV_Separator>
   <exportCSV_SkipUnusedValue>1</exportCSV_SkipUnusedValue>
   <exportCSV_SkipSameValue>0</exportCSV_SkipSameValue>
-  <mdiHistory0>//Viewspace|277</mdiHistory0>
-  <mdiHistory1>//Beenden|262</mdiHistory1>
-  <mdiHistory2>//Model|278</mdiHistory2>
-  <mdiHistory3>//Einstellungen ...|225</mdiHistory3>
+  <mdiHistory0>//Einstellungen ...|225</mdiHistory0>
+  <mdiHistory1>//Viewspace|277</mdiHistory1>
+  <mdiHistory2>//Beenden|262</mdiHistory2>
+  <mdiHistory3>//Model|278</mdiHistory3>
   <mdiHistory4>//Aktualisieren|296</mdiHistory4>
   <mdiHistory5>//Toolpath History|279</mdiHistory5>
   <mdiHistory6>G09</mdiHistory6>
@@ -1121,7 +1121,7 @@
   <mdiHistory47>(print,| Spindel starten)</mdiHistory47>
   <mdiHistory48>(print,|? Spindel starten)</mdiHistory48>
   <mdiHistory49>(print,|b Spindel starten)</mdiHistory49>
-  <uiFontScale>1.10000002384185791016</uiFontScale>
+  <uiFontScale>1.00000000000000000000</uiFontScale>
   <ui3DColorAxisX>0xffff0000</ui3DColorAxisX>
   <ui3DColorAxisY>0xff008000</ui3DColorAxisY>
   <ui3DColorAxisZ>0xff0000ff</ui3DColorAxisZ>
@@ -1137,7 +1137,7 @@
   <ioSer0Timeout>0</ioSer0Timeout>
   <ioSer1Timeout>0</ioSer1Timeout>
   <speedSync>1.00000000000000000000</speedSync>
-  <memused>271</memused>
+  <memused>259</memused>
   <memusedmax>346</memusedmax>
   <uiStateIOLedController>1</uiStateIOLedController>
   <uiStateIOLedOutput>1</uiStateIOLedOutput>
@@ -1273,7 +1273,7 @@
   <displayViewspace>0</displayViewspace>
   <displayModel>1</displayModel>
   <uiMenuVisible>1</uiMenuVisible>
-  <uiJogBtnSize>33</uiJogBtnSize>
+  <uiJogBtnSize>50</uiJogBtnSize>
   <uiJogCrossZX>0</uiJogCrossZX>
   <ui3DMultisample>1</ui3DMultisample>
   <ui3DDepthTest>1</ui3DDepthTest>
