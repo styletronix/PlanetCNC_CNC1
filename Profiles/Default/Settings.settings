@@ -6,9 +6,9 @@
   <firmware>20230504</firmware>
   <serial>65535</serial>
   <controllerCode>CU5Y53GM2C7BAER4NTPA0V8ZWP9E*</controllerCode>
-  <computerCode>KUKHHRH6XRY292E2FPKXR3RKDVKMJ</computerCode>
-  <applicatonStart>2023/08/05 15:21:57</applicatonStart>
-  <applicatonEnd>2023/08/05 15:22:45</applicatonEnd>
+  <computerCode>KUNA17453A4SCNZS18JVAVDR0ARKD</computerCode>
+  <applicatonStart>2023/08/08 11:33:05</applicatonStart>
+  <applicatonEnd>2023/08/08 11:49:08</applicatonEnd>
   <os>Windows 10 (64 bit)</os>
   <cpu>GenuineIntel (14/20)</cpu>
   <mem>32452</mem>
@@ -18,11 +18,11 @@
   <commRd>0</commRd>
   <commErr>0</commErr>
   <commDpl>0</commDpl>
-  <cnt>701</cnt>
-  <tim>91002</tim>
+  <cnt>707</cnt>
+  <tim>91184</tim>
   <lang>GER.txt</lang>
   <codepage>0</codepage>
-  <fileLastOpen>C:\Users\Mitarbeiter.DESKTOP-EBQCM2F\Documents\GCode\AI32137_i2.gcode</fileLastOpen>
+  <fileLastOpen>C:\temp\1002 - Bohren.ngc</fileLastOpen>
   <fileRecentSize>30</fileRecentSize>
   <fileRecentCount>9</fileRecentCount>
   <speedTraverseOverride>1.00000000000000000000</speedTraverseOverride>
@@ -37,8 +37,8 @@
   <cameraOffset22>0.00000000000000000000</cameraOffset22>
   <cameraCalDist>10.00000000000000000000</cameraCalDist>
   <warpResolution>1.00000000000000000000</warpResolution>
-  <simPosition0>1600.00000000000000000000</simPosition0>
-  <simPosition1>1600.00000000000000000000</simPosition1>
+  <simPosition0>19200.00000000000000000000</simPosition0>
+  <simPosition1>1907.00000000000000000000</simPosition1>
   <simPosition2>163200.00000000000000000000</simPosition2>
   <simPosition3>0.00000000000000000000</simPosition3>
   <simPosition4>0.00000000000000000000</simPosition4>
@@ -67,9 +67,9 @@
   <displayPanelRight>1</displayPanelRight>
   <displayBarLeft>366</displayBarLeft>
   <displayBarRight>288</displayBarRight>
-  <displayBarMid>139</displayBarMid>
-  <displayDlgX>799</displayDlgX>
-  <displayDlgY>384</displayDlgY>
+  <displayBarMid>235</displayBarMid>
+  <displayDlgX>827</displayDlgX>
+  <displayDlgY>398</displayDlgY>
   <displaySetX>905</displaySetX>
   <displaySetY>446</displaySetY>
   <displaySetW>790</displaySetW>
@@ -103,15 +103,15 @@
   <displayCSY>432</displayCSY>
   <displayCSW>610</displayCSW>
   <displayCSH>385</displayCSH>
-  <displayPosTab>0</displayPosTab>
-  <displayStateTab>3</displayStateTab>
+  <displayPosTab>1</displayPosTab>
+  <displayStateTab>6</displayStateTab>
   <displayStateTabScroll0>0</displayStateTabScroll0>
   <displayStateTabScroll1>0</displayStateTabScroll1>
   <displayStateTabScroll2>0</displayStateTabScroll2>
   <displayStateTabScroll3>0</displayStateTabScroll3>
-  <displayStateTabScroll4>151</displayStateTabScroll4>
+  <displayStateTabScroll4>130</displayStateTabScroll4>
   <displayStateTabScroll5>534</displayStateTabScroll5>
-  <displayStateTabScroll6>897</displayStateTabScroll6>
+  <displayStateTabScroll6>741</displayStateTabScroll6>
   <displayStateTabScroll7>0</displayStateTabScroll7>
   <displayStateTabScroll8>0</displayStateTabScroll8>
   <displayStateTabScroll9>0</displayStateTabScroll9>
@@ -135,13 +135,13 @@
   <displayStateTabScroll27>0</displayStateTabScroll27>
   <displayStateTabScroll28>0</displayStateTabScroll28>
   <displayStateTabScroll29>0</displayStateTabScroll29>
-  <displayMidTab>1</displayMidTab>
-  <display3DPanX>197.20926439059400081533</display3DPanX>
-  <display3DPanY>-11.49629528158491353906</display3DPanY>
-  <display3DAngleX>-1.27269908169872847381</display3DAngleX>
-  <display3DAngleY>5.78230091830120862539</display3DAngleY>
+  <displayMidTab>0</displayMidTab>
+  <display3DPanX>41.73996560902706676188</display3DPanX>
+  <display3DPanY>-67.98911316807817684094</display3DPanY>
+  <display3DAngleX>-1.46769908169872387305</display3DAngleX>
+  <display3DAngleY>6.00230091830120482399</display3DAngleY>
   <display3DAngleZ>0.00000000000000000000</display3DAngleZ>
-  <display3DFieldOfView>0.02604930918991931951</display3DFieldOfView>
+  <display3DFieldOfView>0.01470415593361973014</display3DFieldOfView>
   <displayFollowPosition>1</displayFollowPosition>
   <displayPosition>1</displayPosition>
   <displayGrid>1</displayGrid>
@@ -163,7 +163,7 @@
   <singleStepEnabled>0</singleStepEnabled>
   <pauseOptionalEnabled>0</pauseOptionalEnabled>
   <softLimitsIgnore>0</softLimitsIgnore>
-  <settingsPageNumber>2</settingsPageNumber>
+  <settingsPageNumber>38</settingsPageNumber>
   <description>CNC 1</description>
   <units>0</units>
   <notes></notes>
@@ -307,7 +307,7 @@
   <ui3DThickness>3.00000000000000266454</ui3DThickness>
   <ui3DResolution>0.05000000000000000278</ui3DResolution>
   <ui3DRefresh>25</ui3DRefresh>
-  <ui3DRefreshFast>1</ui3DRefreshFast>
+  <ui3DRefreshFast>0</ui3DRefreshFast>
   <ui3DHideSubLevel>20</ui3DHideSubLevel>
   <ui3DHideExternalSubs>1</ui3DHideExternalSubs>
   <ui3DHideExternalMCode>1</ui3DHideExternalMCode>
@@ -781,7 +781,7 @@
   <probeTravel>0.00000000000000000000</probeTravel>
   <probeLength>0.00000000000000000000</probeLength>
   <probeUseToolTable>1</probeUseToolTable>
-  <probeSafeHeight>255.00000000000000000000</probeSafeHeight>
+  <probeSafeHeight>254.00000000000000000000</probeSafeHeight>
   <probeEStop>0</probeEStop>
   <homeSpeed>900.00000000000000000000</homeSpeed>
   <homeSpeedLow>60.00000000000000000000</homeSpeedLow>
@@ -1063,64 +1063,64 @@
   <exportCSV_Separator>9</exportCSV_Separator>
   <exportCSV_SkipUnusedValue>1</exportCSV_SkipUnusedValue>
   <exportCSV_SkipSameValue>0</exportCSV_SkipSameValue>
-  <mdiHistory0>//Einstellungen ...|225</mdiHistory0>
-  <mdiHistory1>//Viewspace|277</mdiHistory1>
-  <mdiHistory2>//Beenden|262</mdiHistory2>
-  <mdiHistory3>//Model|278</mdiHistory3>
-  <mdiHistory4>//Aktualisieren|296</mdiHistory4>
-  <mdiHistory5>//Toolpath History|279</mdiHistory5>
-  <mdiHistory6>G09</mdiHistory6>
-  <mdiHistory7>//Notstopp|352</mdiHistory7>
-  <mdiHistory8>//Position verfolgen|273</mdiHistory8>
-  <mdiHistory9>//Zoom auf Position|271</mdiHistory9>
-  <mdiHistory10>//Herauszoomen|270</mdiHistory10>
-  <mdiHistory11>//Vergr&#246;&#223;ern|269</mdiHistory11>
-  <mdiHistory12>//Perspektivische Ansicht|268</mdiHistory12>
-  <mdiHistory13>//Vorderansicht|267</mdiHistory13>
-  <mdiHistory14>//Seitenansicht|266</mdiHistory14>
-  <mdiHistory15>//Ansicht von oben|265</mdiHistory15>
-  <mdiHistory16>//Zoom auf Teil|272</mdiHistory16>
-  <mdiHistory17>//Zentrum Null|274</mdiHistory17>
-  <mdiHistory18>//Einstellungen ...|225</mdiHistory18>
-  <mdiHistory19>//Nach Updates suchen|1070</mdiHistory19>
-  <mdiHistory20>//&#220;ber ...|1073</mdiHistory20>
-  <mdiHistory21>//Beenden|262</mdiHistory21>
-  <mdiHistory22>//Position verfolgen|273</mdiHistory22>
-  <mdiHistory23>//&#214;ffnen ...|4</mdiHistory23>
-  <mdiHistory24>//Letzte Datei &#246;ffnen|5</mdiHistory24>
-  <mdiHistory25>//Model|278</mdiHistory25>
+  <mdiHistory0>//Letzte Datei &#246;ffnen|5</mdiHistory0>
+  <mdiHistory1>//Einstellungen ...|225</mdiHistory1>
+  <mdiHistory2>#&lt;DEBUG&gt;=1</mdiHistory2>
+  <mdiHistory3>#&lt;_DEBUG&gt;=1</mdiHistory3>
+  <mdiHistory4>//Model|278</mdiHistory4>
+  <mdiHistory5>//Viewspace|277</mdiHistory5>
+  <mdiHistory6>//Beenden|262</mdiHistory6>
+  <mdiHistory7>//Aktualisieren|296</mdiHistory7>
+  <mdiHistory8>//Toolpath History|279</mdiHistory8>
+  <mdiHistory9>G09</mdiHistory9>
+  <mdiHistory10>//Notstopp|352</mdiHistory10>
+  <mdiHistory11>//Position verfolgen|273</mdiHistory11>
+  <mdiHistory12>//Zoom auf Position|271</mdiHistory12>
+  <mdiHistory13>//Herauszoomen|270</mdiHistory13>
+  <mdiHistory14>//Vergr&#246;&#223;ern|269</mdiHistory14>
+  <mdiHistory15>//Perspektivische Ansicht|268</mdiHistory15>
+  <mdiHistory16>//Vorderansicht|267</mdiHistory16>
+  <mdiHistory17>//Seitenansicht|266</mdiHistory17>
+  <mdiHistory18>//Ansicht von oben|265</mdiHistory18>
+  <mdiHistory19>//Zoom auf Teil|272</mdiHistory19>
+  <mdiHistory20>//Zentrum Null|274</mdiHistory20>
+  <mdiHistory21>//Einstellungen ...|225</mdiHistory21>
+  <mdiHistory22>//Nach Updates suchen|1070</mdiHistory22>
+  <mdiHistory23>//&#220;ber ...|1073</mdiHistory23>
+  <mdiHistory24>//Beenden|262</mdiHistory24>
+  <mdiHistory25>//Position verfolgen|273</mdiHistory25>
   <mdiHistory26>//&#214;ffnen ...|4</mdiHistory26>
-  <mdiHistory27>M105</mdiHistory27>
-  <mdiHistory28>M100 Q0</mdiHistory28>
-  <mdiHistory29>M100 Q1</mdiHistory29>
-  <mdiHistory30>G91 Z1</mdiHistory30>
-  <mdiHistory31>//Letzte Datei &#246;ffnen|5</mdiHistory31>
-  <mdiHistory32>//&#214;ffnen ...|4</mdiHistory32>
-  <mdiHistory33>//Letzte Datei &#246;ffnen|5</mdiHistory33>
-  <mdiHistory34>(EXPR,CMD(Machine.Spindle))</mdiHistory34>
-  <fileRecent0>C:\temp\1005.gcode</fileRecent0>
-  <fileRecent1>C:\temp\1001a.gcode</fileRecent1>
-  <fileRecent2>C:\Program Files\PlanetCNC\Profiles\Default\Scripts\M104.gcode</fileRecent2>
-  <fileRecent3>C:\temp\1001.gcode</fileRecent3>
-  <fileRecent4>C:\temp\1002.gcode</fileRecent4>
-  <fileRecent5>C:\temp\1002-Nur Gewinde.gcode</fileRecent5>
-  <fileRecent6>C:\temp\1002 - Bohren.ngc</fileRecent6>
+  <mdiHistory27>//Letzte Datei &#246;ffnen|5</mdiHistory27>
+  <mdiHistory28>//Model|278</mdiHistory28>
+  <mdiHistory29>//&#214;ffnen ...|4</mdiHistory29>
+  <mdiHistory30>M105</mdiHistory30>
+  <mdiHistory31>M100 Q0</mdiHistory31>
+  <mdiHistory32>M100 Q1</mdiHistory32>
+  <mdiHistory33>G91 Z1</mdiHistory33>
+  <mdiHistory34>//Letzte Datei &#246;ffnen|5</mdiHistory34>
+  <fileRecent0>C:\temp\1002 - Bohren.ngc</fileRecent0>
+  <fileRecent1>C:\temp\1001.gcode</fileRecent1>
+  <fileRecent2>C:\temp\1005.gcode</fileRecent2>
+  <fileRecent3>C:\temp\1001a.gcode</fileRecent3>
+  <fileRecent4>C:\Program Files\PlanetCNC\Profiles\Default\Scripts\M104.gcode</fileRecent4>
+  <fileRecent5>C:\temp\1002.gcode</fileRecent5>
+  <fileRecent6>C:\temp\1002-Nur Gewinde.gcode</fileRecent6>
   <fileRecent7>C:\temp\1001.tap</fileRecent7>
-  <mdiHistory35>(cmd,'Machine.Spindle')</mdiHistory35>
-  <mdiHistory36>(cmd,Machine.Spindle)</mdiHistory36>
-  <mdiHistory37>=cmdlist()</mdiHistory37>
-  <mdiHistory38>(EXPR,'cmdlist()')</mdiHistory38>
-  <mdiHistory39>(EXPR,cmdlist)</mdiHistory39>
-  <mdiHistory40>(EXPR,'cmdlist')</mdiHistory40>
-  <mdiHistory41>[EXPR[CMDLIST]]</mdiHistory41>
-  <mdiHistory42>[EXPR[CDMLIST]]</mdiHistory42>
-  <mdiHistory43>(print,cmdlist)</mdiHistory43>
-  <mdiHistory44>(cmdlist)</mdiHistory44>
-  <mdiHistory45>//Letzte Datei &#246;ffnen|5</mdiHistory45>
-  <mdiHistory46>(print,|! Spindel starten)</mdiHistory46>
-  <mdiHistory47>(print,| Spindel starten)</mdiHistory47>
-  <mdiHistory48>(print,|? Spindel starten)</mdiHistory48>
-  <mdiHistory49>(print,|b Spindel starten)</mdiHistory49>
+  <mdiHistory35>//&#214;ffnen ...|4</mdiHistory35>
+  <mdiHistory36>//Letzte Datei &#246;ffnen|5</mdiHistory36>
+  <mdiHistory37>(EXPR,CMD(Machine.Spindle))</mdiHistory37>
+  <mdiHistory38>(cmd,'Machine.Spindle')</mdiHistory38>
+  <mdiHistory39>(cmd,Machine.Spindle)</mdiHistory39>
+  <mdiHistory40>=cmdlist()</mdiHistory40>
+  <mdiHistory41>(EXPR,'cmdlist()')</mdiHistory41>
+  <mdiHistory42>(EXPR,cmdlist)</mdiHistory42>
+  <mdiHistory43>(EXPR,'cmdlist')</mdiHistory43>
+  <mdiHistory44>[EXPR[CMDLIST]]</mdiHistory44>
+  <mdiHistory45>[EXPR[CDMLIST]]</mdiHistory45>
+  <mdiHistory46>(print,cmdlist)</mdiHistory46>
+  <mdiHistory47>(cmdlist)</mdiHistory47>
+  <mdiHistory48>//Letzte Datei &#246;ffnen|5</mdiHistory48>
+  <mdiHistory49>(print,|! Spindel starten)</mdiHistory49>
   <uiFontScale>1.00000000000000000000</uiFontScale>
   <ui3DColorAxisX>0xffff0000</ui3DColorAxisX>
   <ui3DColorAxisY>0xff008000</ui3DColorAxisY>
@@ -1137,7 +1137,7 @@
   <ioSer0Timeout>0</ioSer0Timeout>
   <ioSer1Timeout>0</ioSer1Timeout>
   <speedSync>1.00000000000000000000</speedSync>
-  <memused>259</memused>
+  <memused>266</memused>
   <memusedmax>346</memusedmax>
   <uiStateIOLedController>1</uiStateIOLedController>
   <uiStateIOLedOutput>1</uiStateIOLedOutput>

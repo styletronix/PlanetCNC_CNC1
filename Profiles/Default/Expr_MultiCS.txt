@@ -1,21 +1,26 @@
 #Loop
 	;; Using CS buttons in UI to enable different coordinate systems to do work.
 	;; While machine is working on one cs, another part can be prepared at a different cs and enabled for automatic continue at that location.
-	if( EQ(_hw_stop,1) 
-	&& EQ(_sx_machine_home_required,0) 
-	&& EQ(_sx_hasError,0) 
+	
+	; _sx_multiCS_start = 0 Multi CS is allowed to restart machine after Work
+	; _sx_multiCS_start = -1 Multi CS is not allowed to continue with next CS (after E-Stop, or something else)
+	; -sx_multiCS_start = 1 Multi CS has processed previos cs and should continue to next cs.
+
+	if( EQ(_hw_idle,1) 
+	&& EQ(_hw_stop,1)
 	&& GT(_sx_multiCS_enabled,0) 
 	&& EQ(_sx_multiCS_start,1), 
 		exec(
 			_sx_multiCS_start = 0, 
 			print('Auto-Start fuer naechstes CS') ,
+			_sx_startDialogShown = 1,
 			cmd('Machine.Start')
 		)
 	);
 	;END
 
 #OnInit
-	_sx_multiCS_start = 0;
+	_sx_multiCS_start = -1;
 	;; Bits used for CS selection 0=off 1=CS1 2=CS2 4=C3  6=CS3 and CS2;
 	_sx_multiCS_enabled = 0;
 	;END
@@ -29,18 +34,28 @@
 	;END
 
 #OnEStop
-	_sx_multiCS_start = 0;
+	_sx_multiCS_start = -1;
 	;END
 
 #OnEnd
-	if( EQ(_hw_estop,0) 
-		&& EQ(_sx_machine_home_required,0) 
-		&& EQ(_sx_hasError,0) 
-		&& GT(_sx_multiCS_enabled,0),
+	if( EQ(_hw_estop, 0) 
+		&& EQ(_sx_multiCS_start, 0) 
+		&& EQ(_sx_hasError, 0) 
+		&& GT(_sx_multiCS_enabled, 0),
 			exec(
 				_sx_multiCS_start = 1
 			)
 	);
+
+	; Lock multi CS until next manual start if it was not triggered right now for safety reasons.
+	; OnStart is required to be triggered before multi cs is working again.
+	if (EQ(_sx_multiCS_start = 0),
+		exec(
+			_sx_multiCS_start = -1
+		)
+	);
+
+
 	;END
 
 #OnShutdown

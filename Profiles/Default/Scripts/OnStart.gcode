@@ -1,8 +1,6 @@
 ; 2022-06-06	Startbedingungen prüfen
 
-M999	;Startbedingungen prüfen
-
-
+M999 P1	;Startbedingungen prüfen
 
 o<chksperrluft> if [#<_sx_sperrluft_pin_ext1> GT 0]
 	(print, Sperrluft an)
@@ -11,12 +9,8 @@ o<chksperrluft> endif
 
 
 o<chktm> if [[[#<_tool_off_z_num|#<_current_tool>> EQ 0] OR [#<_sx_tool_measureRequired> EQ 1]] AND [#<_tool_skipmeasure_num|#<_current_tool>> EQ 0] AND [#<_current_tool> GT 0]]
-	(dlgname,Werkzeuglänge)
-	(dlg,Werkzeuglänge wurde nicht gemessen. Jetzt messen?, typ=label, x=0, w=600, color=0xffffff)
-	(dlg,./Icons/IMG_MeasureTool.svg, typ=image, w=256, x=0)
-	(dlg,|Ja|Nein, typ=checkbox, x=50, w=410, def=1, store, param=opttool)
-	(dlgshow)
-	o<opt> if [#<opttool> EQ 1]
+	M996 P3	; Werkzeuglänge jetzt messen?
+	o<opt> if [#<_return> EQ 1]
 		G65 P122 R2 U0
 	o<opt> endif
 o<chktm> endif

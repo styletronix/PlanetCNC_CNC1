@@ -11,6 +11,20 @@ Over the years, there where some problems to solve, but now, the machine is work
 
 For more than 2 Years in production environment, I can recommend to use the Planet CNC Controller, Wireless Handwheel and also the TNGv2 Software.
 
+
+# 2023-08-08
+I decided to upload the Power Circuit Plan, to show, how to connect MK3/9 controller to industrial equipment.
+
+You find it as Schaltplan.pdf in the Profile Directory.
+This shows...
+- connection of Axis Drivers
+- Connection of a IR Temperature Sensor to the AUX Analog Input
+- Using of Ext output Relay Board
+- using Solid State Relays as output and input isolation
+- Using Z-Diods to prevent interferences at the Relays and magnetic valves.
+
+
+
 # The most important things I had to learn:
 
 1. Use Opto isolators for in and output. Those from Planet CNC or if you prefere a more industrial style, you may use solid state relais like this one:

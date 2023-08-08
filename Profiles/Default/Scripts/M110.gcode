@@ -7,24 +7,28 @@
 
 o<isProbe> if [#<isProbe> EQ 0]	;WKZ Sensor
 	o<mode> if [#<pvalue> EQ 2]	; Check Result
+		o<chksim> if [#<_hw_sim NE 1>]
 		o<chk> if [#<_hw_input_num|#<_probe_pin_1>> NE 1]
 			o<msgorresult> if [#<stopOnFailure> EQ 1]
 				(dlgname,Störung)
-				(dlg,Messung ungültig. Sensor ist nicht betätigt, typ=label, x=0, w=410, color=0xffffff)
+				(dlg,'Messung ungültig. Sensor ist nicht betätigt', typ=label, x=0, w=410, color=0xffffff)
 				(dlg,./Icons/Warning.png, typ=image, x=0)
 				(dlgshow)
 
 				#<_sx_canceled> = 1
 				M2
 			o<msgorresult> else
-				(print, Störung. Messung ungültig. Sensor ist nicht betätigt)
+				(print, 'Störung. Messung ungültig. Sensor ist nicht betätigt')
 				#<_return> = NAN[]
 				M99
 			o<msgorresult> endif
 		o<chk> endif
+		o<chksim> else
+			(print, 'Prüfung auf Sensorkontakt erfolgt NICHT da SIMULATION AKTIV ist.')
+		o<chksim> endif
 	o<mode> endif
 
-	(print, Messung OK)
+	(print, 'Messung OK')
 	#<_return> = 1
 	M99
 o<isProbe> endif
@@ -85,7 +89,7 @@ o<opt> endif
 
 
 o<chk> if [DEF[#<_sx_wireless_probe_on_extout1>,0] EQ 0]
-	(msg, Keine Funk-Messonde konfiguriert)
+	(msg, 'Keine Funk-Messonde konfiguriert')
 	#<_sx_canceled> = 1
 	M2
 o<chk> endif

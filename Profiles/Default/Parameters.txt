@@ -30,8 +30,8 @@ _home2_u 0.0
 _home2_v 0.0
 _home2_w 0.0
 
-_current_tool 3.0
-_tooloff_z 103.867188
+_current_tool 7.0
+_tooloff_z 111.321875
 _tooloff 1.0
 _tooloff_x 0.0
 _tooloff_y 0.0
@@ -47,7 +47,7 @@ _tooloff_w 0.0
 _sx_haserror 0.0
 _sx_schwenkantrieb_output 6.0
 _sx_machine_flightheight_z 255.0
-_sx_tool_removed_num 1.0
+_sx_tool_removed_num 0.0
 _sx_tool_measurerequired 0.0
 _sx_tool_removed 1.0
 _sx_atc_safex 60.0
@@ -68,4 +68,4 @@ _sx_usefastfindprobing 0.0
 _sx_tool_temperature_max 319.0
 _sx_limit_z_bytool -10.0
 _sx_limit_z_min 10.0
-_sx_tool_atc_occupied 282.0
+_sx_tool_atc_occupied 319.0

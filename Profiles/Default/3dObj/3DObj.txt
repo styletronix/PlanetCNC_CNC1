@@ -112,6 +112,11 @@
 				<Color Value="ffaaaaaa"/>
 				<Transform X="1.6" Y="1119" Z="154"/>
 			</Part>
+			<Part Name="T9_T_WirelessProbe" Visible="NE(AND(_sx_tool_atc_occupied,EXP2(8)),0)">
+				<Mesh Filename="Messtaster.stl" />
+				<Color Value="ffff5050" />
+				<Transform X="1.6" Y="1119" Z="114" />
+			</Part>	
 			<Part Name="T10">
 				<Mesh Filename="ISO30_TH.STL"/>
 				<Color Value="ffffff00"/>
@@ -141,6 +146,11 @@
 										<Mesh Filename="ISO30.STL"/>
 										<Color Value="ffaaaa00"/>
 										<Transform X="0" Y="0" Z="0"/>
+									</Part>
+									<Part Name="WirelessProbe" Visible="EQ(_current_tool, 9)">
+										<Mesh Filename="Messtaster.stl" />
+										<Color Value="ffff5050" />
+										<Transform X="0" Y="0" Z="-40" />
 									</Part>	
 									<Part Name="Niederhalter">
 										<Mesh Filename="Niederhalter.STL"/>
