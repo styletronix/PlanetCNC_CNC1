@@ -9,6 +9,5 @@
 o<chk> if [#<_pause_optional> EQ 1]
 	(print,|! Optionale Pause aktiv)
 	M0
-	#<_pause_optional> = 0
 	(print,Optionale Pause ende)
 o<chk> endif

@@ -1,26 +1,36 @@
 #Loop
 	; Refresh 3D Display. 
-	; Avoid Refresh for Niederhalter while tunning and not in simulation because of high frequent change of state during some programms.
+	; Avoid Refresh for Niederhalter while running and not in simulation because of high frequent change of state during some programms.
 
-	if( NE(_sx_tool_atc_occupied, _sx_3dcache_tool_atc_occupied) ||
-		NE(_current_tool, _sx_3dcache_current_tool) ||
-		NE(_hw_output_num|_sx_schwenkantrieb_output, _sx_3dcache_schwenkantrieb) || 
-		(NE(_hw_output_num|_sx_niederhalter_pin, _sx_3dcache_niederhalter) && (EQ(_hw_sim,1) || EQ(_hw_idle,1))), 
-		exec(
-		 	_sx_3dcache_tool_atc_occupied = _sx_tool_atc_occupied,
-			_sx_3dcache_current_tool = _current_tool,
-			_sx_3dcache_schwenkantrieb = _hw_output_num|_sx_schwenkantrieb_output,
-			_sx_3dcache_niederhalter = _hw_output_num|_sx_niederhalter_pin,
-			print('Refresh 3D View'),
-			cmd("View.Show.Model"),
-			cmd("View.Show.Model")
-		)
+	if( NE(_sx_tool_atc_occupied, _sx_3dcache_tool_atc_occupied) 
+		|| NE(_current_tool, _sx_3dcache_current_tool) 
+		|| NE(_hw_output_num|_sx_schwenkantrieb_output, _sx_3dcache_schwenkantrieb) 
+		|| (
+			NE(_hw_output_num|_sx_niederhalter_pin, _sx_3dcache_niederhalter) 
+			&& (
+				EQ(_hw_sim, 1)
+				|| EQ(_hw_idle, 1)
+			)
+		), 
+			exec('#Refresh3DView')
 	);
 
 	; Reset Start dialog shown with M999 at first program start.
-	if (EQ(_hw_idle,1) && NE(_sx_startDialogShown,0), _sx_startDialogShown = 0)
+	if (EQ(_hw_idle,1) 
+		&& NE(_sx_startDialogShown, 0), 
+			_sx_startDialogShown = 0
+	);
 
 	;END
+
+#Refresh3DView
+	_sx_3dcache_tool_atc_occupied = _sx_tool_atc_occupied,
+	_sx_3dcache_current_tool = _current_tool,
+	_sx_3dcache_schwenkantrieb = _hw_output_num|_sx_schwenkantrieb_output,
+	_sx_3dcache_niederhalter = _hw_output_num|_sx_niederhalter_pin,
+	print('Refresh 3D View'),
+	cmd("View.Show.Model"),
+	cmd("View.Show.Model")
 
 #Loop5
 

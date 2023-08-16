@@ -4,6 +4,7 @@
 ; 2022-02-28	add flight height check prior to retractZ
 ; 2022-06-05	Deutsche Texte hinzugefügt
 ; 2023-02-27	Option to reset optional pause. Option to show Temp dialog when pause triggered by Temperature Monitoring
+; 2023-08-11	Moved Dialogs to M996 P4-P6
 
 #<retractZ> = 0		;Retract distance on Pause 0 wegen kompatibilitätsproblemen beim fortsetzen.
 
@@ -37,30 +38,24 @@ o<chksperrluft> if [#<_sx_sperrluft_pin_ext1> GT 0]
 o<chksperrluft> endif
 
 
-; Dialog zum fortsetzen
-#<optpause> = 1
-(dlgname,Pause)
-(dlg,./Icons/IMG_Pause.png, typ=image, x=0)
+; Dialog zum fortsetzen bei zu hoher Temperatur
 o<opt> if [#<_sx_tool_temperature_ok> EQ 0]
-	(dlg,Pause wegen zu hoher Temperatur., typ=label, x=0, w=410, color=0xff0000)
-	(dlg,Temperatureinstellung anpassen, typ=label, x=20, w=500, color=0xddddfff)
-	(dlg,|Ja|Nein, typ=checkbox, x=50, w=100, def=2, param=settemp)
+	M996 P4 ; Temperatur bearbeiten?
+	o<opt2> if [#<_return> EQ 1]
+		M996 P6	;Show Temperature Dialog
+	o<opt2> endif
 	#<_sx_tool_temperature_ok> = 1
-o<opt> endif
-o<opt> if [#<_pause_optional> EQ 1]
-	(dlg,Optionale Pause beenden?, typ=label, x=0, w=410, color=0xddddfff)
-	(dlg,|Ja|Nein, typ=checkbox, x=50, w=100, def=1, param=optpause)
-o<opt> endif
-(dlg,OK für Pause fortsetzen, typ=label, x=20, w=500, color=0xddddfff)
-(dlgshow)
-
-o<opt> if [#<settemp> EQ 1]
-	M203	;Show Temperature Dialog
-o<opt> endif
-
-o<opt> if [#<optpause> EQ 1]
 	#<_pause_optional> = 0
 o<opt> endif
+
+; Dialog zum fortsetzen bei Pause
+o<opt> if [#<_pause_optional> EQ 1]
+	M996 P5	; Optionale Pause beenden?
+	o<opt2> if [#<_return> EQ 1]
+		#<_pause_optional> = 0
+	o<opt2> endif
+o<opt> endif
+
 	
 
 ;Restore Mist and Flood state -------------
